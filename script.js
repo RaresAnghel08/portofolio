@@ -385,6 +385,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// CV Modal: open/close and load PDF
+document.addEventListener('DOMContentLoaded', function() {
+    const viewBtn = document.getElementById('view-cv-btn');
+    const modal = document.getElementById('cv-modal');
+    const backdrop = document.getElementById('cv-modal-backdrop');
+    const closeBtn = document.getElementById('cv-modal-close');
+    const iframe = document.getElementById('cv-iframe');
+
+    if (!modal || !viewBtn) return;
+
+    function openModal() {
+        iframe.src = 'cv.pdf#zoom=75';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    viewBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+});
+
 // Performance: Lazy load images
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img[loading="lazy"]');

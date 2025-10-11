@@ -733,3 +733,17 @@ html {
 .skill-tag:hover {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
+
+/* CV modal tweaks */
+.modal { display: none; position: fixed; inset: 0; z-index: 10000; }
+.modal[aria-hidden="false"] { display: block; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.modal-content { position: relative; max-width: 900px; margin: 3vh auto; background: #fff; border-radius: 8px; overflow: hidden; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.modal-close { position: absolute; right: 8px; top: 6px; background: transparent; border: none; font-size: 26px; cursor: pointer; }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+#cv-iframe { height: 90vh; width: 100%; border: none; }
+
+@media (max-width: 600px) {
+    .modal-content { width: calc(100% - 24px); margin: 4vh 12px; height: 95vh; }
+    #cv-iframe { height: 80vh; }
+}
