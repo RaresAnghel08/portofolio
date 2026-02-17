@@ -312,23 +312,36 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    max-width: 1000px; /* keep cards centered with side space */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .project-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-    border: 1px solid #e8e8e8;
+    position: relative;
+    background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.95));
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid rgba(15,23,42,0.04);
+    overflow: hidden;
+}
+
+.project-card::before{
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 5px;
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
 }
 
 .project-card:hover,
 .project-card.project-hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
 }
 
 .project-image {
@@ -350,6 +363,23 @@ body {
     transform: scale(2); /* Make logos/icons larger within same container */
 }
 
+/* Logo images (square, preserve aspect ratio) */
+.logo-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: transparent;
+    transform: none !important; /* override other transforms */
+}
+
+.achievement-image .logo-img {
+    width: 140px;
+    height: 140px;
+}
+
 .project-image i {
     font-size: 2.5rem;
     color: #3498db;
@@ -367,6 +397,7 @@ body {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: #2c3e50;
+    font-weight: 700;
 }
 
 .project-content p {
@@ -420,25 +451,29 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    max-width: 1000px; /* center achievements with side spacing */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .achievement-card {
-    background: white;
-    border-radius: 15px;
+    background: linear-gradient(180deg,var(--card), rgba(255,255,255,0.98));
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 8px 30px rgba(15,23,42,0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .achievement-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(15,23,42,0.1);
 }
 
 .achievement-image {
     height: 200px;
     overflow: hidden;
     position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #f8f9fa;
@@ -451,42 +486,44 @@ body {
     transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), object-position 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Specific positioning for different achievements */
-.achievement-card:nth-child(1) .achievement-image img {
-    object-position: center 30%; /* InfoEducație Competition - camera up a bit */
+/* Specific positioning for different achievements (class-based) */
+.achievement-card .achievement-image img {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), object-position 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.achievement-card:nth-child(2) .achievement-image img {
+/* Medal: rotate 90deg counterclockwise and slightly zoom */
+.achievement-card.medal .achievement-image img {
     object-position: center center;
-    transform: scale(1.4); /* InfoEducație Medal - larger scale for better visibility */
-    object-fit: cover; /* Crop top and bottom to focus on the medal */
-    clip-path: inset(5% 0 5% 0); /* Crop 5% from top and bottom */
+    object-fit: cover;
+    clip-path: inset(5% 0 5% 0);
+    transform: none !important;
+    transition: none !important;
 }
 
-.achievement-card:nth-child(3) .achievement-image img,
-.achievement-card:nth-child(4) .achievement-image img {
+/* OJTI & ONTI: rotate 90deg clockwise and zoom */
+.achievement-card.ojti .achievement-image img,
+.achievement-card.onti .achievement-image img {
     object-position: center center;
-    transform: rotate(90deg) scale(1.8); /* OJTI & ONTI - landscape orientation, full view */
-    object-fit: contain; /* Ensure full diploma is visible */
+    transform: rotate(90deg) scale(1.5) !important;
+    object-fit: contain;
+}
+.achievement-card.ojti:hover .achievement-image img,
+.achievement-card.onti:hover .achievement-image img {
+    /* keep rotation/scale static on hover */
+    transform: rotate(90deg) scale(1.5) !important;
+    transition: none !important;
 }
 
-.achievement-card:nth-child(5) .achievement-image img {
-    object-position: center center; /* Project Presentation - normal */
-}
-
-.achievement-card:hover .achievement-image img {
+/* Default hover: small zoom for non-rotated images */
+.achievement-card:not(.medal):not(.ojti):not(.onti):hover .achievement-image img {
     transform: scale(1.05);
 }
 
-/* Specific hover effects for rotated images */
-.achievement-card:nth-child(2):hover .achievement-image img {
-    transform: scale(1.5); /* InfoEducație Medal - larger zoom in on hover */
-}
-
-/* Disable hover effects for OJTI and ONTI diplomas (cards 3 & 4) */
-.achievement-card:nth-child(3):hover .achievement-image img,
-.achievement-card:nth-child(4):hover .achievement-image img {
-    transform: rotate(90deg) scale(1.8) !important;
+/* CCIR: prevent rotation/scale on hover */
+.achievement-card.ccir .achievement-image img,
+.achievement-card.ccir:hover .achievement-image img {
+    transform: none !important;
+    object-fit: contain;
 }
 
 .achievement-content {
@@ -497,6 +534,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #2c3e50;
+    font-weight: 700;
 }
 
 .achievement-content p {
@@ -561,9 +599,9 @@ body {
 }
 
 .contact-link:hover {
-    background: #3498db;
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .contact-link i {
