@@ -1,429 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rares Anghel - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rareș Anghel</title>
+  <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Rares Anghel</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#achievements" class="nav-link">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <br><span class="highlight">Rares Anghel</span></h1>
-                <p class="hero-subtitle">Software Developer & Competitive Programmer</p>
-                <p class="hero-description">
-                    I'm a junior at Tudor Vianu National College of Computer Science in Bucharest. 
-                    Passionate about creating innovative solutions and participating in programming competitions. 
-                    Award-winning developer with experience in Python development, web technologies, and OCR applications.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    <button id="view-cv-btn" class="btn btn-outline">View CV</button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <img src="media/poza_eu.jpg" alt="Rares Anghel Profile" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CV Modal (placed before About) -->
-    <div id="cv-modal" class="modal" aria-hidden="true">
-        <div class="modal-backdrop" id="cv-modal-backdrop"></div>
-        <div class="modal-content" role="dialog" aria-modal="true" aria-label="CV Preview">
-            <button class="modal-close" id="cv-modal-close" aria-label="Close">&times;</button>
-            <iframe id="cv-iframe" src="" frameborder="0"></iframe>
-        </div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">RA</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button id="cv-btn" class="btn-outline-nav">View CV</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#achievements" class="mobile-link">Achievements</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate software developer and junior at Tudor Vianu National College of Computer Science in Bucharest. 
-                        My journey in technology has been marked by numerous achievements in national programming competitions 
-                        and innovative project development using Python and modern web technologies.
-                    </p>
-                    <p>
-                        I specialize in creating efficient algorithms, developing web applications, and working 
-                        with OCR (Optical Character Recognition) technologies. My experience spans from 
-                        participating in prestigious competitions like InfoEducație to developing practical 
-                        solutions that solve real-world problems for Romanian NGOs.
-                    </p>
-                    <div class="skills">
-                        <h3>Technical Skills</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">OCR Technologies</span>
-                            <span class="skill-tag">Algorithm Design</span>
-                            <span class="skill-tag">Problem Solving</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- CV MODAL -->
+  <div id="cv-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <iframe id="cv-iframe" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Bucharest · Romania</p>
+        <h1 class="hero-name">Rareș<br><em>Anghel</em></h1>
+        <p class="hero-tagline">Software developer, researcher &amp; competitive programmer at Tudor Vianu · CS Olympics class</p>
+        <div class="hero-badges">
+          <span class="badge">YYGS 2026 · Yale</span>
+          <span class="badge">CCIR · Harvard IQSS</span>
+          <span class="badge">ONTIC Silver · 2026</span>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="media/ocr230.png" alt="OCR230 Application" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>OCR230 - Document Processing Solution</h3>
-                        <p>
-                            A specialized OCR application designed to streamline tax form processing for Romanian NGOs. 
-                            This Python-based solution helps non-governmental organizations efficiently process Form 230 
-                            and other scanned documents used for fundraising. Currently use by 50 NGOs across Romania, 
-                            significantly improving their document processing workflow and administrative efficiency.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OCR</span>
-                            <span class="tech-tag">Document Processing</span>
-                            <span class="tech-tag">NGO Solutions</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ocr230.koyeb.app/" target="_blank" rel="noopener" class="project-link">
-                                <i class="fas fa-globe"></i> View Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img class="logo-img" src="media/advance_ed_logo.png" alt="AdvancedEdLink" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>AdvanceEdLink</h3>
-                        <p>
-                            AI-driven education system for test preparation with measurable learning progress rather than
-                            simple test completion. I contributed to developing advanced LLMs and the platform's SAT
-                            preparation tutorials. The project was recognized as a Top 100 Semifinalist in the President
-                            Innovation Challenge Innovation Lab at Harvard University. Production deployment URL contains my name.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">AI</span>
-                            <span class="tech-tag">Education</span>
-                            <span class="tech-tag">LLMs</span>
-                            <span class="tech-tag">Learning Analytics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://rares-dvanced-ed.vercel.app" target="_blank" rel="noopener" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Production
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="media/code_sinaia_logo.png" alt="Code Sinaia Logo" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>Code Sinaia Project</h3>
-                        <p>
-                            Innovative programming project developed for Code Sinaia using Python. This project showcases 
-                            advanced algorithmic thinking and problem-solving capabilities in competitive 
-                            programming environments, demonstrating expertise in algorithm optimization and data structures.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Algorithms</span>
-                            <span class="tech-tag">Data Structures</span>
-                            <span class="tech-tag">Optimization</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://codesinaia.inproted.org/" target="_blank" rel="noopener" class="project-link">
-                                <i class="fas fa-globe"></i> Live Site
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="media/vianu.png" alt="Romanian Masters of Informatics — Static Site" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>Romanian Masters of Informatics — Static Site</h3>
-                        <p>
-                            Static HTML/CSS/JS site converted from a Hugo site. Includes a small Python generator
-                            that builds the participants page from CSV data. Deployed as a static site on school server.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Netlify</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://rmi.lbi.ro/" target="_blank" rel="noopener" class="project-link">
-                                <i class="fas fa-globe"></i> Live Site
-                            </a>
-                            <a href="https://github.com/RaresAnghel08/rmi-website" target="_blank" rel="noopener" class="project-link">
-                                <i class="fab fa-github"></i> Repo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>K-10 SEC Analyzer</h3>
-                        <p>
-                            A modern web app that analyzes SEC 10-K filings using NLP and FinBERT to score pricing power,
-                            uncertainty, and risk factors (PPI / UNC / RF). Provides visual charts, AI-driven recommendations,
-                            and CSV export for research and investment workflows.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">FinBERT</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Streamlit</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://k10analyzer.streamlit.app/" target="_blank" rel="noopener" class="project-link">
-                                <i class="fas fa-globe"></i> View Website
-                            </a>
-                            <a href="https://github.com/RaresAnghel08/k-10-sec-analyzer" target="_blank" rel="noopener" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div> 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Platformă de probleme de informatica</h3>
-                            <p>
-                                Platform for solving programming problems in Python built with Flask and SQLite. Features registration,
-                                login, problem listing, and solution submissions with real-time feedback.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Flask</span>
-                                <span class="tech-tag">Evaluator</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://platformainfo.koyeb.app/" target="_blank" rel="noopener" class="project-link">
-                                    <i class="fas fa-globe"></i> Live Site
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>
-                            Responsive portfolio website showcasing my projects, achievements, and skills. 
-                            Built with modern web technologies and optimized for performance and user experience.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">View work</a>
+          <a href="#contact" class="btn-ghost">Get in touch</a>
         </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Awards</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-image">
-                        <img src="media/diploma_infoeducatie1.png" alt="InfoEducație Diploma" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>InfoEducație Competition</h3>
-                        <p>Outstanding performance in the national InfoEducație programming competition, 
-                           demonstrating excellence in algorithm design and implementation.</p>
-                        <div class="achievement-year">2025</div>
-                    </div>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-image">
-                        <img class="logo-img" src="media/yygs_logo.jpg" alt="YYGS IST" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>YYGS IST Participant</h3>
-                        <p>Selected for the Young Global Scholars (IST program) — 1 of 6 Romanians accepted, participating in advanced seminars and collaborative research.</p>
-                        <div class="achievement-year">2024</div>
-                    </div>
-                </div>
-
-                <div class="achievement-card ccir">
-                    <div class="achievement-image">
-                        <img class="logo-img" src="media/ccir_logo.jpg" alt="CCIR Research" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>CCIR Research (with Dr. Danny Ebanks)</h3>
-                        <p>Collaborated on research for the paper "Class Bias in LLM‑Based Resume Screening: How Socioeconomic Status Signals Shape Scores for Equally Qualified Candidates" as part of CCIR work with Dr. Danny Ebanks.</p>
-                        <div class="achievement-year">2025</div>
-                    </div>
-                </div>
-                <div class="achievement-card medal">
-                    <div class="achievement-image">
-                        <img src="media/medalie_infoeducatie_2025.jpg" alt="InfoEducație Medal" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>InfoEducație Medal</h3>
-                        <p>Awarded medal for exceptional achievement in the InfoEducație competition, 
-                           recognizing innovative problem-solving and technical excellence.</p>
-                        <div class="achievement-year">2025</div>
-                    </div>
-                </div>
-
-                <div class="achievement-card ojti">
-                    <div class="achievement-image">
-                        <img src="media/Diploma_OJTI_2025.jpg" alt="OJTI Diploma" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>OJTI Competition</h3>
-                        <p>Diploma from the County Olympiad in Information Technology (OJTI), 
-                           showcasing strong foundation in computer science and programming.</p>
-                        <div class="achievement-year">2025</div>
-                    </div>
-                </div>
-
-                <div class="achievement-card onti">
-                    <div class="achievement-image">
-                        <img src="media/Diploma_ONTI_2025.jpg" alt="ONTI Diploma" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>ONTI Competition</h3>
-                        <p>National Olympiad in Information Technology (ONTI) diploma, 
-                           representing the highest level of competitive programming achievement.</p>
-                        <div class="achievement-year">2025</div>
-                    </div>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-image">
-                        <img src="media/project_presenting_infoeducatie.png" alt="Project Presentation" loading="lazy">
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Project Presentation</h3>
-                        <p>Successfully presented innovative project at InfoEducație competition, 
-                           demonstrating both technical skills and presentation abilities.</p>
-                        <div class="achievement-year">2025</div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo">
+          <img src="media/poza_eu.png" alt="Rareș Anghel" loading="eager">
         </div>
-    </section>
+        <div class="hero-photo-ring"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>
-                        I'm always interested in discussing new opportunities, innovative projects, 
-                        or just having a conversation about technology and programming. Feel free to reach out!
-                    </p>
-                    <div class="contact-links">
-                        <a href="https://www.linkedin.com/in/raresanghel/" target="_blank" rel="noopener" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="mailto:raresanghel2008@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>Email</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-main">
+          <h2 class="section-heading">Building things that matter,<br><em>at scale</em></h2>
+          <p class="about-body">
+            I'm an 11th-grader in the Olympics class at Tudor Vianu National High School of Computer Science — one of Romania's top CS programs. My work spans full-stack product engineering, academic ML/NLP research, and civic tech. I care about building software that solves real problems for real people.
+          </p>
+          <p class="about-body">
+            Currently: ML/NLP internship at Antech Consulting SRL, Founder Engineer at AdvancedLink, and co-organizer of Code Sinaia — a programming camp that has taught 150+ children across 3+ editions. Supervised research by Dr. Danny Ebanks (Harvard IQSS) and Dominic Skinnion (MIT).
+          </p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Rares Anghel. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener" title="GitHub Profile"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/raresanghel/" target="_blank" rel="noopener" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                </div>
+        <div class="about-sidebar">
+          <div class="skills-block">
+            <p class="skills-label">Languages</p>
+            <div class="skill-list">
+              <span>Python</span><span>C++</span><span>TypeScript</span><span>JavaScript</span>
             </div>
+          </div>
+          <div class="skills-block">
+            <p class="skills-label">Stack</p>
+            <div class="skill-list">
+              <span>React / Vite</span><span>Next.js</span><span>Tailwind</span><span>tRPC</span>
+              <span>Flask</span><span>Node / Express</span><span>Prisma</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <p class="skills-label">ML / Data</p>
+            <div class="skill-list">
+              <span>scikit-learn</span><span>TensorFlow</span><span>Ollama</span><span>FinBERT</span>
+              <span>EasyOCR</span><span>Pandas / NumPy</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <p class="skills-label">Infra</p>
+            <div class="skill-list">
+              <span>Google Cloud Run</span><span>Vercel</span><span>GitHub Actions</span>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-label">02 / Projects</div>
+      <h2 class="section-heading">Featured work</h2>
+
+      <!-- Featured row: 2 big -->
+      <div class="projects-featured">
+
+        <div class="project-card card-dark reveal">
+          <div class="project-logo-wrap">
+            <img src="media/ocr230.png" alt="OCR230" class="project-logo">
+          </div>
+          <div class="project-body">
+            <h3>OCR230</h3>
+            <p>Desktop app automating Romanian tax Form 230 processing for NGOs. Published on the Microsoft Store, deployed on Google Cloud Run. Used by 100+ NGOs. <strong>Silver medal at InfoEducație</strong> — competing across all high school grades.</p>
+            <div class="project-tags"><span>Python</span><span>EasyOCR</span><span>Cloud Run</span><span>MS Store</span></div>
+            <div class="project-links">
+              <a href="https://ocr230.koyeb.app/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card card-dark reveal">
+          <div class="project-logo-wrap">
+            <img src="media/advance_ed_logo.png" alt="AdvancedLink" class="project-logo">
+          </div>
+          <div class="project-body">
+            <h3>AdvancedLink <span class="role-chip">Founder Engineer</span></h3>
+            <p>Neuroadaptive learning platform. Built the diagnostic flow, adaptive session engine, and Prisma data layer.<strong>Top 100 Semifinalist — Harvard Presidential Innovation Challenge.</strong> Stack: Vinxi, tRPC, TanStack Router, Tailwind. YC application submitted.</p>
+            <div class="project-tags"><span>TypeScript</span><span>tRPC</span><span>Prisma</span><span>Tailwind</span></div>
+            <div class="project-links">
+              <a href="https://rares-advanced-ed.vercel.app" target="_blank" rel="noopener">Production <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Grid: rest -->
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-logo-wrap small">
+            <img src="media/bugetul-romaniei.png" alt="Bugetul României" class="project-logo">
+          </div>
+          <div class="project-body">
+            <h3>Romania Budget</h3>
+            <p>Interactive Romanian national budget dashboard with a "Higher or Lower" game mechanic. 6,500+ users. Built with React + Vite + Tailwind on public Ministry of Finance data.</p>
+            <div class="project-tags"><span>React</span><span>Vite</span><span>Tailwind</span><span>Civic tech</span></div>
+            <div class="project-links">
+              <a href="https://bugetul-romaniei.com" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <div class="project-body">
+            <h3>K-10 SEC Analyzer</h3>
+            <p>Web app analyzing SEC 10-K filings with NLP and FinBERT. Scores pricing power, uncertainty, and risk factors (PPI / UNC / RF) with visual charts and CSV export.</p>
+            <div class="project-tags"><span>Python</span><span>FinBERT</span><span>FastAPI</span><span>Streamlit</span></div>
+            <div class="project-links">
+              <a href="https://k10analyzer.streamlit.app/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/RaresAnghel08/k-10-sec-analyzer" target="_blank" rel="noopener">Code <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-logo-wrap small">
+            <img src="media/vianu.png" alt="RMI" class="project-logo">
+          </div>
+          <div class="project-body">
+            <h3>Romanian Masters of Informatics</h3>
+            <p>Static HTML/CSS/JS site converted from Hugo. Python generator builds the participants page from CSV. Deployed on school server.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>Python</span></div>
+            <div class="project-links">
+              <a href="https://rmi.lbi.ro/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/RaresAnghel08/rmi-website" target="_blank" rel="noopener">Code <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-logo-wrap small">
+            <img src="media/code_sinaia_logo.png" alt="Code Sinaia" class="project-logo">
+          </div>
+          <div class="project-body">
+            <h3>Code Sinaia</h3>
+            <p>Programming summer camp for children, co-organized under Inproted NGO. 3+ editions, 150+ children taught. Curriculum design and hands-on instruction.</p>
+            <div class="project-tags"><span>Education</span><span>Python</span><span>NGO</span></div>
+            <div class="project-links">
+              <a href="https://codesinaia.inproted.org/" target="_blank" rel="noopener">Website <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-code"></i></div>
+          <div class="project-body">
+            <h3>Info Platform</h3>
+            <p>Platform for solving programming problems in Python, built with Flask and SQLite. Registration, login, problem listing, submissions with real-time feedback.</p>
+            <div class="project-tags"><span>Python</span><span>Flask</span><span>SQLite</span></div>
+            <div class="project-links">
+              <a href="https://platformainfo.koyeb.app/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="section research-strip">
+    <div class="container">
+      <div class="research-card reveal">
+        <div class="research-meta">
+          <div class="research-icon"><i class="fas fa-flask"></i></div>
+          <div class="research-affil">
+            <img src="media/ccir_logo.jpg" alt="CCIR" class="research-logo">
+            <span>CCIR · Harvard IQSS · MIT</span>
+          </div>
+        </div>
+        <div class="research-body">
+          <p class="research-kicker">Academic Research · 2025</p>
+          <h3>"Class Bias in LLM-Based Resume Screening: How Socioeconomic Status Signals Shape Scores for Equally Qualified Candidates"</h3>
+          <p>10,000 synthetic resumes generated via Gemini API, scored across Claude Sonnet, Gemini Flash, and local Ollama models (Qwen 2.5 7B, Mistral 7B). OLS/LPM analysis producing 6 publication-quality figures per job type. Key finding: Claude Sonnet shows strong class bias (AMCE ≈ +2.75 pts for employer prestige); Gemini near-zero; Qwen selective.</p>
+          <p class="research-supervisors">Supervised by <strong>Dr. Danny Ebanks</strong> (Harvard IQSS) &amp; <strong>Dominic Skinnion</strong> (MIT)</p>
+          <div class="project-tags"><span>NLP</span><span>LLMs</span><span>OLS/LPM</span><span>Python</span><span>LaTeX</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section achievements">
+    <div class="container">
+      <div class="section-label">03 / Achievements</div>
+      <h2 class="section-heading">Recognitions &amp; milestones</h2>
+      <div class="ach-grid">
+
+        <!-- Row 1: InfoEducatie featured (spans 2) + YYGS -->
+        <div class="ach-card ach-featured reveal">
+          <div class="ach-img-wrap">
+            <img src="media/diploma_infoeducatie1.png" alt="InfoEducație Silver">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2025</span>
+            <h3>InfoEducație — Silver Medal</h3>
+            <p>National software projects competition. Silver across all high school grades for OCR230 — a free tool now used by 100+ Romanian NGOs.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-img-wrap logo">
+            <img src="media/yygs_logo.jpg" alt="YYGS">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2026</span>
+            <h3>Yale Young Global Scholars — IST</h3>
+            <p>The only Romanian accepted to the IST session with a scholarship. Selected among 6 Romanians total across all YYGS programs.</p>
+          </div>
+        </div>
+
+        <!-- Row 2: ONTIC Silver 11th + ONTIC Bronze 9th + CCIR -->
+        <div class="ach-card reveal">
+          <div class="ach-img-wrap diploma rotated">
+            <img src="media/silver_onti_11th.jpg" alt="ONTIC Silver 2026">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2026</span>
+            <h3>ONTIC — Silver Medal</h3>
+            <p>Silver at the National Olympiad in ICT (11th grade), Satu Mare — national recognition for technical excellence.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-img-wrap diploma rotated">
+            <img src="media/bronze_onti_9th.jpg" alt="ONTIC Bronze 2024">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2024</span>
+            <h3>ONTIC — Bronze Medal</h3>
+            <p>Bronze at the National Olympiad in ICT (9th grade), Slobozia — first national podium at Tudor Vianu.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-img-wrap logo">
+            <img src="media/ccir_logo.jpg" alt="CCIR">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2025</span>
+            <h3>CCIR Research — Harvard IQSS</h3>
+            <p>Presented research on socioeconomic bias in LLM-based resume screening to supervisors at Harvard IQSS and MIT.</p>
+          </div>
+        </div>
+
+        <!-- Row 3: InfoEducatie Medal + Code Sinaia + Harvard Innovation Challenge -->
+        <div class="ach-card reveal">
+          <div class="ach-img-wrap">
+            <img src="media/medalie_infoeducatie_2025.jpg" alt="Medal">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2025</span>
+            <h3>InfoEducație Medal</h3>
+            <p>Physical medal awarded at the national InfoEducație ceremony for outstanding project quality and technical execution.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-img-wrap">
+            <img src="media/presentation_code_sinaia2025.png" alt="Code Sinaia">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2025</span>
+            <h3>Code Sinaia — Instructor</h3>
+            <p>Co-organized the 3rd edition of Code Sinaia, Romania's programming camp for children under Inproted NGO.</p>
+          </div>
+        </div>
+
+        <div class="ach-card ach-highlight reveal">
+          <div class="ach-img-wrap logo">
+            <img src="media/advance_ed_logo.png" alt="Harvard Innovation Challenge">
+          </div>
+          <div class="ach-body">
+            <span class="ach-year">2025</span>
+            <h3>Harvard Presidential Innovation Challenge</h3>
+            <p>AdvancedLink recognized as a <strong>Top 100 Semifinalist</strong> at the Harvard Presidential Innovation Challenge Innovation Lab.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-label">04 / Contact</div>
+      <div class="contact-inner">
+        <h2 class="section-heading contact-heading">Let's build<br><em>something.</em></h2>
+        <p class="contact-sub">Open to research collaborations, internships, and interesting projects. Reach out — I respond fast.</p>
+        <div class="contact-links">
+          <a href="mailto:raresanghel2008@gmail.com" class="contact-link" id="email-link">
+            <i class="fas fa-envelope"></i> raresanghel2008@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/raresanghel/" target="_blank" rel="noopener" class="contact-link">
+            <i class="fab fa-linkedin"></i> linkedin.com/in/raresanghel
+          </a>
+          <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener" class="contact-link">
+            <i class="fab fa-github"></i> github.com/RaresAnghel08
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Rareș Anghel</span>
+      <span class="footer-copy">© 2026 · Built with care in Bucharest</span>
+      <div class="footer-socials">
+        <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/raresanghel/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="script.js"></script>
 </body>
 </html>
