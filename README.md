@@ -7,7 +7,7 @@ A modern, responsive portfolio website to showcase my projects, achievements, an
 - **OCR230**: OCR app for Romanian NGOs ([Demo](https://ocr230.com))
 - **Code Sinaia Project**: Competitive programming solution
 - **This Website**: Responsive portfolio
- - **AdvancedEdLink**: AI education system for SAT preparation and learning-progress measurement (production URL: update when available)
+ - **AdvancedEd Link**: AI education system for SAT preparation and learning-progress measurement (production URL: update when available)
 
 ## � Achievements
 - InfoEducație & ONTI/OJTI diplomas
