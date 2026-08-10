@@ -636,7 +636,6 @@ img { display: block; max-width: 100%; }
   object-fit: contain;
   width: 80%;
   height: 90%;
-  transform: rotate(90deg) scale(0.9);
 }
 
 .ach-body { padding: 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
