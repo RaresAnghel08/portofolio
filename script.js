@@ -96,6 +96,39 @@ document.querySelectorAll('img').forEach(img => {
   img.addEventListener('error', () => { img.style.display = 'none'; });
 });
 
+// ── Ledger count-up ────────────────────────────────────────
+const ledger = document.getElementById('hero-ledger');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animateCount(el) {
+  const target = parseInt(el.dataset.count, 10);
+  if (prefersReducedMotion) {
+    el.textContent = target.toLocaleString('en-US') + '+';
+    return;
+  }
+  const duration = 1400;
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * eased).toLocaleString('en-US') + (p >= 1 ? '+' : '');
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+if (ledger) {
+  const ledgerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        ledger.querySelectorAll('.ledger-num').forEach(animateCount);
+        ledgerObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  ledgerObserver.observe(ledger);
+}
+
 // ── Stagger children of grids ─────────────────────────────
 document.querySelectorAll('.projects-grid, .projects-featured, .ach-grid').forEach(grid => {
   Array.from(grid.children).forEach((child, i) => {
