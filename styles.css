@@ -824,8 +824,3 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(135deg, var(--bg-card) 70%, rgba(200,165,90,0.05));
 }
 .ach-card.ach-highlight .ach-body h3 { color: var(--accent); }
-
-/* ── 8-card achievement grid: 3 cols, featured spans 2 ──── */
-.ach-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
