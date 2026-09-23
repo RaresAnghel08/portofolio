@@ -507,6 +507,7 @@ img { display: block; max-width: 100%; }
 
 .project-logo-wrap {
   height: 70px;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   padding: 0 14px;
