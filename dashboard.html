@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics — Rareș Anghel</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dash-body">
+
+  <div id="gate" class="dash-gate">
+    <form id="gate-form" class="dash-gate-card" autocomplete="off">
+      <h1>Analytics</h1>
+      <p>Enter the passcode to view raresanghel.com traffic data.</p>
+      <input type="password" id="gate-input" autocomplete="current-password" placeholder="Passcode" required>
+      <button type="submit">Unlock</button>
+      <p id="gate-error" class="dash-error" hidden>Wrong passcode — try again.</p>
+    </form>
+  </div>
+
+  <main id="dash" class="dash" hidden>
+    <header class="dash-header">
+      <h1>raresanghel.com — Analytics</h1>
+      <div class="dash-filters" role="group" aria-label="Date range">
+        <button type="button" data-days="7">7d</button>
+        <button type="button" data-days="30" class="active">30d</button>
+        <button type="button" data-days="90">90d</button>
+      </div>
+    </header>
+
+    <section class="dash-tiles" id="tiles" aria-label="Summary stats"></section>
+
+    <section class="dash-card">
+      <h2>Pageviews over time</h2>
+      <div id="chart-pageviews" class="dash-chart"></div>
+    </section>
+
+    <div class="dash-grid">
+      <section class="dash-card">
+        <h2>Top pages</h2>
+        <div id="chart-pages" class="dash-chart"></div>
+      </section>
+
+      <section class="dash-card">
+        <h2>Most clicked elements</h2>
+        <div id="chart-clicks" class="dash-chart"></div>
+      </section>
+
+      <section class="dash-card">
+        <h2>Referrers</h2>
+        <div id="chart-referrers" class="dash-chart"></div>
+      </section>
+
+      <section class="dash-card">
+        <h2>Devices</h2>
+        <div id="chart-devices" class="dash-chart"></div>
+      </section>
+    </div>
+
+    <p class="dash-footer">
+      Data captured with PostHog (autocapture + session recording).
+      <a href="https://eu.posthog.com" target="_blank" rel="noopener">Open full PostHog dashboard →</a>
+    </p>
+  </main>
+
+  <div id="tooltip" class="chart-tooltip" role="tooltip"></div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

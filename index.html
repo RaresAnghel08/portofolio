@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Analytics (PostHog): pageviews, autocapture clicks, time on page, session recording -->
+  <script src="https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/array.js"></script>
+  <script>
+    posthog.init('phc_u7WXrrP6ZoaduJ7hDJjVc6WTTjLXqgfWWe5mN69fYfLG', {
+      api_host: '/ingest',
+      ui_host: 'https://eu.posthog.com'
+    });
+  </script>
+
   <title>Rareș Anghel — Software Developer & Researcher | Bucharest, Romania</title>
   <meta name="description" content="Software developer, ML/NLP researcher, and competitive programmer at Tudor Vianu National College of Computer Science. Builder of civic-tech dashboards, OCR230, and AI-bias research presented at Cambridge with Harvard IQSS & MIT.">
   <meta name="author" content="Rareș Anghel">

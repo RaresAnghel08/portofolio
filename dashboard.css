@@ -1,0 +1,201 @@
+/* ── Dashboard-only styles — builds on styles.css tokens ────────── */
+
+.dash-body { background: var(--bg-2); min-height: 100vh; }
+
+/* Passcode gate */
+.dash-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.dash-gate[hidden] { display: none; }
+.dash-gate-card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: 0 1px 2px rgba(20,24,28,0.04);
+}
+.dash-gate-card h1 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.dash-gate-card p { color: var(--text-2); font-size: 0.9rem; margin-bottom: 20px; }
+.dash-gate-card input {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  padding: 11px 14px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.dash-gate-card input:focus { outline: 2px solid var(--accent-light); outline-offset: 1px; }
+.dash-gate-card button {
+  width: 100%;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 11px 14px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+.dash-gate-card button:hover { background: var(--accent-2); }
+.dash-error { color: #b3403f; font-size: 0.85rem; margin-top: 10px; margin-bottom: 0 !important; }
+
+/* Shell */
+.dash { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+.dash[data-loading="true"] .dash-card,
+.dash[data-loading="true"] .dash-tiles { opacity: 0.45; transition: opacity 0.15s; pointer-events: none; }
+
+.dash-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.dash-header h1 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.dash-filters { display: flex; gap: 6px; border: 1px solid var(--border-2); border-radius: var(--radius); padding: 3px; }
+.dash-filters button {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.dash-filters button:hover { background: var(--accent-glow); }
+.dash-filters button.active { background: var(--accent); color: #fff; }
+
+/* Stat tiles */
+.dash-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.dash-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.dash-tile-label { font-size: 0.78rem; color: var(--text-3); margin-bottom: 6px; }
+.dash-tile-value { font-family: var(--mono); font-size: 1.6rem; color: var(--text); font-weight: 500; }
+
+/* Cards */
+.dash-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  margin-bottom: 16px;
+}
+.dash-card h2 {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+
+.dash-empty { color: var(--text-3); font-size: 0.85rem; padding: 8px 0; }
+
+/* Bar rows */
+.bar-list { display: flex; flex-direction: column; gap: 8px; }
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 42%) 1fr auto;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 3px 6px;
+  cursor: default;
+}
+.bar-row:hover, .bar-row:focus-visible { background: var(--accent-glow); outline: none; }
+.bar-label {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.bar-swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.bar-track { height: 14px; background: var(--bg-2); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 0 4px 4px 0; min-width: 3px; }
+.bar-value { font-family: var(--mono); font-size: 0.8rem; color: var(--text); min-width: 34px; text-align: right; }
+
+/* Line chart */
+.line-chart-wrap { position: relative; }
+.line-chart-wrap svg { display: block; width: 100%; height: 200px; overflow: visible; }
+.line-gridline { stroke: var(--border); stroke-width: 1; }
+.line-path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.line-area { fill: var(--accent); opacity: 0.08; }
+.line-crosshair { stroke: var(--border-2); stroke-width: 1; opacity: 0; }
+.line-dot { fill: var(--accent); stroke: var(--bg-card); stroke-width: 2; opacity: 0; }
+.line-axis-label { font-family: var(--mono); font-size: 10px; fill: var(--text-3); }
+
+.chart-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 50;
+  display: none;
+  white-space: nowrap;
+}
+.chart-tooltip strong { font-family: var(--mono); }
+
+.dash-table-toggle {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.76rem;
+  color: var(--accent-2);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.dash-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.8rem; }
+.dash-table th, .dash-table td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--border); }
+.dash-table td:last-child, .dash-table th:last-child { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+.dash-footer { text-align: center; color: var(--text-3); font-size: 0.8rem; margin-top: 24px; }
+.dash-footer a { color: var(--accent-2); }
+
+@media (max-width: 560px) {
+  .dash-tiles { grid-template-columns: repeat(2, 1fr); }
+  .bar-row { grid-template-columns: minmax(70px, 40%) 1fr auto; }
+}
