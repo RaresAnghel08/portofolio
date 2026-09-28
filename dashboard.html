@@ -15,7 +15,7 @@
   <div id="gate" class="dash-gate">
     <form id="gate-form" class="dash-gate-card" autocomplete="off">
       <h1>Analytics</h1>
-      <p>Enter the passcode to view raresanghel.com traffic data.</p>
+      <p>Enter the passcode to view traffic data for raresanghel.com and its subdomains.</p>
       <input type="password" id="gate-input" autocomplete="current-password" placeholder="Passcode" required>
       <button type="submit">Unlock</button>
       <p id="gate-error" class="dash-error" hidden>Wrong passcode — try again.</p>
@@ -24,7 +24,7 @@
 
   <main id="dash" class="dash" hidden>
     <header class="dash-header">
-      <h1>raresanghel.com — Analytics</h1>
+      <h1>raresanghel.com &amp; subdomains — Analytics</h1>
       <div class="dash-filters" role="group" aria-label="Date range">
         <button type="button" data-days="7">7d</button>
         <button type="button" data-days="30" class="active">30d</button>
@@ -35,11 +35,21 @@
     <section class="dash-tiles" id="tiles" aria-label="Summary stats"></section>
 
     <section class="dash-card">
+      <h2>Sites overview</h2>
+      <div id="table-sites" class="dash-chart"></div>
+    </section>
+
+    <section class="dash-card">
       <h2>Pageviews over time</h2>
       <div id="chart-pageviews" class="dash-chart"></div>
     </section>
 
     <div class="dash-grid">
+      <section class="dash-card">
+        <h2>Traffic by site</h2>
+        <div id="chart-sites" class="dash-chart"></div>
+      </section>
+
       <section class="dash-card">
         <h2>Top pages</h2>
         <div id="chart-pages" class="dash-chart"></div>

@@ -117,7 +117,9 @@
 
   function render(data) {
     renderTiles(data.totals);
+    renderSitesTable(document.getElementById('table-sites'), data.sites_table);
     renderLineChart(document.getElementById('chart-pageviews'), data.pageviews_by_day);
+    renderBarChart(document.getElementById('chart-sites'), data.top_sites, { color: 'var(--accent)' });
     renderBarChart(document.getElementById('chart-pages'), data.top_pages, { color: 'var(--accent)' });
     renderBarChart(document.getElementById('chart-clicks'), data.top_clicks, { color: 'var(--accent)' });
     renderBarChart(document.getElementById('chart-referrers'), data.top_referrers, { color: 'var(--accent)' });
@@ -133,7 +135,8 @@
       { label: 'Pageviews', value: fmtCompact(totals.pageviews) },
       { label: 'Sessions', value: fmtCompact(totals.sessions) },
       { label: 'Avg. time on page', value: fmtDuration(totals.avg_time_on_page_seconds) },
-      { label: 'Clicks tracked', value: fmtCompact(totals.clicks_tracked) }
+      { label: 'Clicks tracked', value: fmtCompact(totals.clicks_tracked) },
+      { label: 'Sites tracked', value: fmtCompact(totals.sites_tracked) }
     ];
     var container = document.getElementById('tiles');
     container.innerHTML = '';
@@ -152,14 +155,9 @@
     });
   }
 
-  function addTableToggle(container, columns, rows) {
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'dash-table-toggle';
-    btn.textContent = 'View as table';
+  function buildTable(columns, rows) {
     var table = document.createElement('table');
     table.className = 'dash-table';
-    table.hidden = true;
 
     var thead = document.createElement('thead');
     var headRow = document.createElement('tr');
@@ -182,6 +180,16 @@
       tbody.appendChild(tr);
     });
     table.appendChild(tbody);
+    return table;
+  }
+
+  function addTableToggle(container, columns, rows) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'dash-table-toggle';
+    btn.textContent = 'View as table';
+    var table = buildTable(columns, rows);
+    table.hidden = true;
 
     btn.addEventListener('click', function () {
       table.hidden = !table.hidden;
@@ -190,6 +198,21 @@
 
     container.appendChild(btn);
     container.appendChild(table);
+  }
+
+  function renderSitesTable(container, sitesTable) {
+    container.innerHTML = '';
+    if (!sitesTable || !sitesTable.length) {
+      var empty = document.createElement('div');
+      empty.className = 'dash-empty';
+      empty.textContent = 'No data yet for this range.';
+      container.appendChild(empty);
+      return;
+    }
+    var rows = sitesTable.map(function (s) {
+      return [s.site, fmtCompact(s.pageviews), fmtCompact(s.unique_visitors), fmtDuration(s.avg_time_on_page_seconds)];
+    });
+    container.appendChild(buildTable(['Site', 'Pageviews', 'Unique visitors', 'Avg. time on page'], rows));
   }
 
   function renderBarChart(container, items, opts) {

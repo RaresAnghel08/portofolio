@@ -1,7 +1,7 @@
 // Vercel Function: aggregates PostHog event data for the custom dashboard.
 // Auth: Authorization: Bearer <DASHBOARD_PASSWORD>
 
-const MAX_PAGES_PER_EVENT = 15;
+const MAX_PAGES_PER_EVENT = 20;
 const PAGE_LIMIT = 100;
 
 async function fetchEvents(host, projectId, apiKey, eventName, after) {
@@ -38,6 +38,20 @@ function pathFromEvent(ev) {
     }
   }
   return '(unknown)';
+}
+
+function siteFromEvent(ev) {
+  const p = ev.properties || {};
+  let host = p.$host;
+  if (!host && p.$current_url) {
+    try {
+      host = new URL(p.$current_url).hostname;
+    } catch {
+      host = null;
+    }
+  }
+  if (!host) return '(unknown)';
+  return host.replace(/^www\./, '');
 }
 
 function labelForClick(ev) {
@@ -114,11 +128,42 @@ module.exports = async (req, res) => {
       series.push({ date: k, count: byDay[k] || 0 });
     }
 
+    const MAIN_SITE = 'raresanghel.com';
+
     const pageCounts = {};
+    const siteCounts = {};
+    const siteVisitors = {};
+    const siteDurationSum = {};
+    const siteDurationCount = {};
+
     for (const ev of pageviews) {
-      const p = pathFromEvent(ev);
-      pageCounts[p] = (pageCounts[p] || 0) + 1;
+      const site = siteFromEvent(ev);
+      const path = pathFromEvent(ev);
+      const label = site === MAIN_SITE ? path : `${site} ${path}`;
+      pageCounts[label] = (pageCounts[label] || 0) + 1;
+      siteCounts[site] = (siteCounts[site] || 0) + 1;
+      if (!siteVisitors[site]) siteVisitors[site] = new Set();
+      siteVisitors[site].add(ev.distinct_id);
     }
+
+    for (const ev of pageleaves) {
+      const site = siteFromEvent(ev);
+      const dur = ev.properties && ev.properties.$prev_pageview_duration;
+      if (typeof dur === 'number' && dur >= 0) {
+        siteDurationSum[site] = (siteDurationSum[site] || 0) + dur;
+        siteDurationCount[site] = (siteDurationCount[site] || 0) + 1;
+      }
+    }
+
+    const sites = Object.keys(siteCounts).sort((a, b) => siteCounts[b] - siteCounts[a]);
+    const sitesTable = sites.map((site) => ({
+      site,
+      pageviews: siteCounts[site],
+      unique_visitors: siteVisitors[site] ? siteVisitors[site].size : 0,
+      avg_time_on_page_seconds: siteDurationCount[site]
+        ? Math.round(siteDurationSum[site] / siteDurationCount[site] / 1000)
+        : 0,
+    }));
 
     const referrerCounts = {};
     for (const ev of pageviews) {
@@ -159,12 +204,15 @@ module.exports = async (req, res) => {
         sessions: uniqueSessions,
         clicks_tracked: autocaptures.length,
         avg_time_on_page_seconds: avgTimeOnPageSeconds,
+        sites_tracked: sites.length,
       },
       pageviews_by_day: series,
-      top_pages: topN(pageCounts, 8),
-      top_referrers: topN(referrerCounts, 8),
-      top_clicks: topN(clickCounts, 8),
+      top_pages: topN(pageCounts, 12),
+      top_referrers: topN(referrerCounts, 10),
+      top_clicks: topN(clickCounts, 12),
       device_breakdown: topN(deviceCounts, 6),
+      top_sites: topN(siteCounts, 10),
+      sites_table: sitesTable,
     });
   } catch (err) {
     res.status(502).json({ error: 'Failed to fetch analytics', detail: err.message });
