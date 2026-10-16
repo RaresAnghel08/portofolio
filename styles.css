@@ -940,3 +940,131 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(135deg, var(--bg-card) 70%, rgba(138,90,30,0.07));
 }
 .ach-card.ach-highlight .ach-body h3 { color: var(--medal); }
+
+/* ── Forbes România 30 Under 30 ─────────────────────────── */
+:root {
+  --forbes-black: #0b0b0c;
+  --forbes-red:   #d4202c;
+}
+
+.badge-forbes {
+  color: #ffffff;
+  background: var(--forbes-black);
+  border: 1px solid var(--forbes-black);
+  border-left: 3px solid var(--forbes-red);
+  letter-spacing: 0.06em;
+  transition: transform 0.2s, background 0.2s;
+}
+.badge-forbes:hover { background: #1c1c1e; transform: translateY(-2px); }
+
+.forbes-band {
+  background: var(--forbes-black);
+  color: #ffffff;
+  padding: 96px 0;
+  position: relative;
+}
+.forbes-band::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--forbes-red);
+}
+
+.forbes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.forbes-band .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.forbes-kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9c9c6;
+  margin-bottom: 1.25rem;
+  padding-left: 14px;
+  border-left: 3px solid var(--forbes-red);
+}
+
+.forbes-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.12;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+.forbes-title em { font-style: italic; color: #ffffff; border-bottom: 2px solid var(--forbes-red); }
+
+.forbes-body {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #d6d6d3;
+  margin-bottom: 1.75rem;
+}
+
+.forbes-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.16);
+  padding-top: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+.forbes-meta dt {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a9a97;
+  margin-bottom: 0.3rem;
+}
+.forbes-meta dd {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.forbes-thanks {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #a9a9a6;
+}
+
+.forbes-figure { margin: 0; }
+.forbes-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+.forbes-figure figcaption {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9a9a97;
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .forbes-band { padding: 72px 0; }
+  .forbes-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-badges .badge-forbes { text-align: left; }
+}
+@media (max-width: 600px) {
+  .forbes-meta { grid-template-columns: 1fr; gap: 0.9rem; }
+}
