@@ -12,7 +12,7 @@ A modern, responsive portfolio website to showcase my projects, achievements, an
 ## � Achievements
 - InfoEducație & ONTI/OJTI diplomas
 - Programming competition medals
- - **Forbes România 30 Under 30**: Class of 2026, profiled in issue #281 (October 2026)
+ - **Forbes Romania 30 Under 30**: Class of 2026, profiled in issue #281 (October 2026)
  - **YYGS IST**: Selected participant — 1 of 6 Romanians accepted
  - **CCIR Research**: Contributed to research with Dr. Danny Ebanks on "Class Bias in LLM‑Based Resume Screening"
 
