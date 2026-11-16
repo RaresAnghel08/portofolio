@@ -453,3 +453,40 @@ main:focus { outline: none; }
 .timeline-year { padding-top: 4px; }
 .timeline-title { font-family: var(--serif); font-weight: 500; font-size: 19px; line-height: 1.4; }
 .timeline-desc { font-size: 15px; color: var(--body); }
+
+/* ── About ──────────────────────────────────────────────── */
+.about-grid { display: flex; flex-wrap: wrap; gap: 40px 64px; }
+.about-head { flex: 1 1 360px; min-width: 0; }
+.about-body { flex: 1 1 420px; min-width: 0; }
+.about-bio { margin: 0; max-width: 56ch; font-size: 18px; line-height: 1.65; color: var(--body); }
+.skills {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 28px 32px;
+}
+.skills-title { margin: 0 0 10px; }
+.skills-list { list-style: none; margin: 0; padding: 0; font-size: 16px; line-height: 1.7; }
+
+/* ── Contact ────────────────────────────────────────────── */
+.contact {
+  padding-top: clamp(64px, 9vw, 120px);
+  padding-bottom: clamp(48px, 6vw, 72px);
+}
+.contact-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.contact-lede { margin: 24px 0 0; max-width: 52ch; font-size: 19px; color: var(--body); }
+.contact-email {
+  margin: 32px 0 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(24px, 3.4vw, 40px);
+  overflow-wrap: anywhere;
+}
+.contact-links { margin-top: 28px; }
