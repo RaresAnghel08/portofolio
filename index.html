@@ -37,6 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add('js')</script>
 
   <script type="application/ld+json">
   {
@@ -62,7 +63,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- HEADER -->
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Rares Anghel, back to top">
       <span class="brand-mark" aria-hidden="true">RA</span>
@@ -71,7 +72,11 @@
         <span class="brand-role">Developer and researcher</span>
       </span>
     </a>
-    <nav class="nav" aria-label="Primary">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-label">Menu</span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Primary">
       <a class="nav-link" href="#work">Work</a>
       <a class="nav-link" href="#research">Research</a>
       <a class="nav-link" href="#recognition">Recognition</a>
@@ -88,30 +93,37 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <p class="eyebrow hero-meta">
+      <p class="eyebrow hero-meta hero-anim d1">
         <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Forbes Romania 30 Under 30, 2026</span>
         <span>Bucharest, Romania</span>
       </p>
-      <h1 id="hero-title" class="h1">Software that lightens <span class="accent">public bureaucracy</span>, and research on how AI treats people.</h1>
-      <p class="lede">I'm Rares Anghel, a student developer and researcher at Tudor Vianu National High School of Computer Science. My tool OCR230 processes tax Form 230 for 100+ Romanian NGOs. My study of class bias in LLM resume screening was presented at Cambridge in July 2026.</p>
-      <div class="cta-row">
+      <h1 id="hero-title" class="h1 hero-anim d2">Software that lightens <span class="accent">public bureaucracy</span>, and research on how AI treats people.</h1>
+      <p class="lede hero-anim d3">I'm Rares Anghel, a student developer and researcher at Tudor Vianu National High School of Computer Science. My tool OCR230 processes tax Form 230 for 100+ Romanian NGOs. My study of class bias in LLM resume screening was presented at Cambridge in July 2026.</p>
+      <div class="cta-row hero-anim d4">
         <a class="btn btn-dark" href="#work">See selected work</a>
         <a class="btn btn-light" href="#contact">Get in touch</a>
       </div>
     </div>
-    <figure class="portrait-card">
-      <img src="media/poza_eu-portrait.webp" width="512" height="640" fetchpriority="high" decoding="async" alt="Portrait of Rares Anghel in a black sweater, seated in front of a blue-lit studio backdrop">
-      <figcaption>
-        <span class="portrait-name">Rares Anghel</span>
-        <span class="portrait-note">Class of 2026</span>
-      </figcaption>
+    <figure class="portrait-card hero-settle">
+      <div class="portrait-media">
+        <img src="media/poza_eu-portrait.webp" width="512" height="640" fetchpriority="high" decoding="async" alt="Portrait of Rares Anghel in a black sweater, seated in front of a blue-lit studio backdrop">
+        <a class="float-chip chip-top" href="#research">
+          <img class="logo logo-24" src="media/logos/ccir.webp" width="24" height="24" decoding="async" alt="">
+          <span>Presented at Cambridge, July 2026</span>
+        </a>
+        <a class="float-chip chip-bottom" href="#work">
+          <img class="logo logo-24" src="media/ocr230.webp" width="24" height="24" decoding="async" alt="">
+          <span><strong>100+</strong> NGOs use OCR230</span>
+        </a>
+      </div>
+      <figcaption><span class="badge-dot" aria-hidden="true"></span>Forbes Romania 30 Under 30, 2026</figcaption>
     </figure>
   </div>
 </section>
 
 <!-- IMPACT NUMBERS -->
 <section class="stats" aria-label="Impact in numbers">
-  <div class="wrap">
+  <div class="wrap reveal">
   <ul class="list-reset stats-grid">
     <li class="stat">
       <span class="stat-num">1M+</span>
@@ -138,7 +150,7 @@
 </section>
 
 <!-- AFFILIATIONS -->
-<section class="wrap affiliations" aria-labelledby="aff-title">
+<section class="wrap affiliations reveal" aria-labelledby="aff-title">
   <h2 id="aff-title" class="eyebrow">Schools, programs and organizations</h2>
   <ul class="list-reset aff-grid">
     <li class="aff">
@@ -177,7 +189,7 @@
 </section>
 
 <!-- WORK -->
-<section id="work" class="wrap section" aria-labelledby="work-title">
+<section id="work" class="wrap section reveal" aria-labelledby="work-title">
   <div class="section-head">
     <div>
       <p class="eyebrow eyebrow-accent">01 / Selected work</p>
@@ -328,7 +340,7 @@
 
 <!-- RESEARCH -->
 <section id="research" class="research" aria-labelledby="research-title">
-  <div class="wrap research-inner">
+  <div class="wrap research-inner reveal">
     <div class="research-grid">
       <div class="research-main">
         <div class="research-kicker">
@@ -378,7 +390,7 @@
 </section>
 
 <!-- RECOGNITION -->
-<section id="recognition" class="wrap section" aria-labelledby="recognition-title">
+<section id="recognition" class="wrap section reveal" aria-labelledby="recognition-title">
   <p class="eyebrow eyebrow-accent section-kicker">03 / Recognition</p>
   <h2 id="recognition-title" class="h2">Awards, programs and service</h2>
 
@@ -457,7 +469,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="wrap section" aria-labelledby="about-title">
+<section id="about" class="wrap section reveal" aria-labelledby="about-title">
   <div class="about-grid">
     <div class="about-head">
       <p class="eyebrow eyebrow-accent">04 / About</p>
@@ -489,7 +501,7 @@
 
 <!-- CONTACT -->
 <section id="contact" class="wrap contact" aria-labelledby="contact-title">
-  <div class="contact-card">
+  <div class="contact-card reveal">
     <div class="contact-main">
       <p class="eyebrow">05 / Contact</p>
       <h2 id="contact-title" class="contact-title">Let's build <span class="accent">something</span>.</h2>
@@ -513,6 +525,47 @@
     <a href="#top">Back to top<span class="arrow" aria-hidden="true">↑</span></a>
   </div>
 </footer>
+
+<script>
+  // Mobile menu and one subtle reveal per section.
+  (function () {
+    var header = document.getElementById('site-header');
+    var btn = header.querySelector('.menu-toggle');
+    var label = btn.querySelector('.menu-label');
+    var nav = document.getElementById('site-nav');
+
+    function setOpen(open) {
+      header.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      label.textContent = open ? 'Close' : 'Menu';
+    }
+    btn.addEventListener('click', function () {
+      setOpen(btn.getAttribute('aria-expanded') !== 'true');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && header.classList.contains('is-open')) { setOpen(false); btn.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (header.classList.contains('is-open') && !header.contains(e.target)) setOpen(false);
+    });
+    window.matchMedia('(min-width: 900px)').addEventListener('change', function (m) {
+      if (m.matches) setOpen(false);
+    });
+
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('reveal-ready');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
 
 <script>
   // Analytics (PostHog), loaded after the page so it never blocks rendering.
