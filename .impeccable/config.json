@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-16T18:07:34.923Z",
+        "reason": "User brief: approved design-reference.html specifies italic accent phrases 'public bureaucracy' and 'something' in IBM Plex Serif"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-16T18:07:35.081Z",
+        "reason": "User brief: approved design-reference.html specifies a mono eyebrow above the hero h1"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-16T18:42:44.601Z",
+        "reason": "Claude verified: inset comes from CSS classes on inner wrappers (.hero-inner 48-88px, .stats-grid 32-48px, .research-inner 56-96px, .contact-card 28-64px); static scan cannot see class padding; screenshots at 390-1440px show full inset"
+      }
+    ]
+  }
+}

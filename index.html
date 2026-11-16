@@ -1,624 +1,589 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Analytics (PostHog): pageviews, autocapture clicks, time on page, session recording -->
-  <script src="https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/array.js"></script>
-  <script>
-    posthog.init('phc_u7WXrrP6ZoaduJ7hDJjVc6WTTjLXqgfWWe5mN69fYfLG', {
-      api_host: '/ingest',
-      ui_host: 'https://eu.posthog.com'
-    });
-  </script>
-
-  <title>Rareș Anghel — Forbes Romania 30 Under 30 · Software Developer & Researcher</title>
-  <meta name="description" content="Forbes Romania 30 Under 30 (class of 2026). Software developer, ML/NLP researcher, and competitive programmer at Tudor Vianu National College of Computer Science. Builder of civic-tech dashboards, OCR230, and AI-bias research presented at Cambridge with Harvard IQSS & MIT.">
-  <meta name="author" content="Rareș Anghel">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rares Anghel | Software developer and researcher</title>
+  <meta name="description" content="Rares Anghel, student developer and researcher. OCR230 processes tax Form 230 for 100+ Romanian NGOs. Research on class bias in LLM resume screening.">
+  <meta name="author" content="Rares Anghel">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://raresanghel.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://raresanghel.com/">
-  <meta property="og:site_name" content="Rareș Anghel">
+  <meta property="og:site_name" content="Rares Anghel">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Rareș Anghel — Forbes Romania 30 Under 30 · Software Developer & Researcher">
-  <meta property="og:description" content="Forbes Romania 30 Under 30 (class of 2026). Software developer, ML/NLP researcher, and competitive programmer at Tudor Vianu National College of Computer Science. Builder of civic-tech dashboards, OCR230, and AI-bias research presented at Cambridge with Harvard IQSS & MIT.">
-  <meta property="og:image" content="https://raresanghel.com/media/poza_eu.png">
+  <meta property="og:title" content="Rares Anghel | Software developer and researcher">
+  <meta property="og:description" content="Rares Anghel, student developer and researcher. OCR230 processes tax Form 230 for 100+ Romanian NGOs. Research on class bias in LLM resume screening.">
+  <meta property="og:image" content="https://raresanghel.com/media/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="RA monogram, the name Rares Anghel and the line Software developer and researcher">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rareș Anghel — Forbes Romania 30 Under 30 · Software Developer & Researcher">
-  <meta name="twitter:description" content="Forbes Romania 30 Under 30 (class of 2026). Software developer, ML/NLP researcher, and competitive programmer at Tudor Vianu National College of Computer Science.">
-  <meta name="twitter:image" content="https://raresanghel.com/media/poza_eu.png">
+  <meta name="twitter:title" content="Rares Anghel | Software developer and researcher">
+  <meta name="twitter:description" content="Rares Anghel, student developer and researcher. OCR230 processes tax Form 230 for 100+ Romanian NGOs. Research on class bias in LLM resume screening.">
+  <meta name="twitter:image" content="https://raresanghel.com/media/og-image.png">
+  <meta name="twitter:image:alt" content="RA monogram, the name Rares Anghel and the line Software developer and researcher">
 
   <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add('js')</script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Rareș Anghel",
+    "name": "Rares Anghel",
+    "alternateName": "Rares Anghel",
+    "jobTitle": "Software developer and researcher",
     "url": "https://raresanghel.com/",
-    "image": "https://raresanghel.com/media/poza_eu.png",
-    "jobTitle": "Software Developer & Researcher",
-    "award": "Forbes Romania 30 Under 30, class of 2026",
-    "email": "mailto:rares@raresanghel.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bucharest",
-      "addressCountry": "RO"
-    },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Tudor Vianu National College of Computer Science"
-    },
+    "image": "https://raresanghel.com/media/poza_eu-portrait.webp",
     "sameAs": [
-      "https://github.com/RaresAnghel08",
-      "https://www.linkedin.com/in/raresanghel/"
+      "https://linkedin.com/in/raresanghel",
+      "https://github.com/RaresAnghel08"
     ],
-    "knowsAbout": ["Software Engineering", "Machine Learning", "NLP", "Civic Technology", "Competitive Programming"]
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Tudor Vianu National High School of Computer Science"
+    }
   }
   </script>
 </head>
-<body>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">RA</a>
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#achievements" class="nav-link">Achievements</a></li>
-        <li><a href="#publications" class="nav-link">Publications</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button type="button" id="cv-btn" class="btn-outline-nav">View CV</button>
-      <button type="button" class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#achievements" class="mobile-link">Achievements</a>
-      <a href="#publications" class="mobile-link">Publications</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-    </div>
-  </nav>
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Rares Anghel, back to top">
+      <span class="brand-mark" aria-hidden="true">RA</span>
+      <span class="brand-text" aria-hidden="true">
+        <span class="brand-name">Rares Anghel</span>
+        <span class="brand-role">Developer and researcher</span>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-label">Menu</span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a class="nav-link" href="#work">Work</a>
+      <a class="nav-link" href="#research">Research</a>
+      <a class="nav-link" href="#recognition">Recognition</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <a class="btn btn-dark btn-sm" href="cv.pdf" type="application/pdf" download="Rares-Anghel-CV.pdf">Download CV</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- CV MODAL -->
-  <div id="cv-modal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop" id="modal-backdrop"></div>
-    <div class="modal-box">
-      <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-      <iframe id="cv-iframe" src="" frameborder="0"></iframe>
+<main id="main" tabindex="-1">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow hero-meta hero-anim d1">
+        <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Forbes Romania 30 Under 30, 2026</span>
+        <span>Bucharest, Romania</span>
+      </p>
+      <h1 id="hero-title" class="h1 hero-anim d2">Software that lightens <span class="accent">public bureaucracy</span>, and research on how AI treats people.</h1>
+      <p class="lede hero-anim d3">I'm Rares Anghel, a student developer and researcher at Tudor Vianu National High School of Computer Science. My tool OCR230 processes tax Form 230 for 100+ Romanian NGOs. My study of class bias in LLM resume screening was presented at Cambridge in July 2026.</p>
+      <div class="cta-row hero-anim d4">
+        <a class="btn btn-dark" href="#work">See selected work</a>
+        <a class="btn btn-light" href="#contact">Get in touch</a>
+      </div>
     </div>
+    <figure class="portrait-card hero-settle">
+      <div class="portrait-media">
+        <img src="media/poza_eu-portrait.webp" width="512" height="640" fetchpriority="high" decoding="async" alt="Portrait of Rares Anghel in a black sweater, seated in front of a blue-lit studio backdrop">
+      </div>
+      <figcaption><span class="badge-dot" aria-hidden="true"></span>Forbes Romania 30 Under 30, 2026</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<section class="stats" aria-label="Impact in numbers">
+  <div class="wrap reveal">
+  <ul class="list-reset stats-grid">
+    <li class="stat">
+      <span class="stat-num">1M+</span>
+      <span class="stat-label">forms processed</span>
+      <span class="stat-source"><img class="logo logo-24" src="media/ocr230.webp" width="24" height="24" loading="lazy" decoding="async" alt=""><span class="eyebrow">OCR230</span></span>
+    </li>
+    <li class="stat">
+      <span class="stat-num">1M+</span>
+      <span class="stat-label">students represented</span>
+      <span class="stat-source"><img class="logo logo-24" src="media/logos/consiliul-elevilor-mark.webp" width="24" height="24" loading="lazy" decoding="async" alt=""><span class="eyebrow">National Student Council</span></span>
+    </li>
+    <li class="stat">
+      <span class="stat-num">10,000+</span>
+      <span class="stat-label">synthetic resumes scored</span>
+      <span class="stat-source"><img class="logo logo-24" src="media/logos/ccir.webp" width="24" height="24" loading="lazy" decoding="async" alt=""><span class="eyebrow">CCIR bias study</span></span>
+    </li>
+    <li class="stat">
+      <span class="stat-num">150+</span>
+      <span class="stat-label">children taught to code</span>
+      <span class="stat-source"><img class="logo logo-24" src="media/logos/code-sinaia.webp" width="24" height="24" loading="lazy" decoding="async" alt=""><span class="eyebrow">Code Sinaia</span></span>
+    </li>
+  </ul>
+  </div>
+</section>
+
+<!-- AFFILIATIONS -->
+<section class="wrap affiliations reveal" aria-labelledby="aff-title">
+  <h2 id="aff-title" class="eyebrow">Schools, programs and organizations</h2>
+  <ul class="list-reset aff-grid">
+    <li class="aff">
+      <img class="logo logo-48 logo-soft pad-6" src="media/logos/vianu.webp" width="48" height="48" loading="lazy" decoding="async" alt="Tudor Vianu National High School of Computer Science crest">
+      <span class="aff-text"><span class="aff-name">Tudor Vianu National High School of Computer Science</span><span class="aff-role">Olympics class, 12th grade</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-cover" src="media/logos/yygs.webp" width="48" height="48" loading="lazy" decoding="async" alt="Yale Young Global Scholars logo">
+      <span class="aff-text"><span class="aff-name">Yale Young Global Scholars</span><span class="aff-role">IST, scholarship recipient, 2026</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-cover" src="media/logos/ccir.webp" width="48" height="48" loading="lazy" decoding="async" alt="Cambridge Centre for International Research logo">
+      <span class="aff-text"><span class="aff-name">CCIR</span><span class="aff-role">Researcher, presented at Cambridge</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-soft pad-6" src="media/advance_ed_logo.webp" width="48" height="48" loading="lazy" decoding="async" alt="AdvancedEd Link logo">
+      <span class="aff-text"><span class="aff-name">AdvancedEd Link</span><span class="aff-role">Founder Engineer</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-soft pad-4" src="media/logos/consiliul-elevilor-mark.webp" width="48" height="48" loading="lazy" decoding="async" alt="National Student Council (Consiliul Elevilor) emblem">
+      <span class="aff-text"><span class="aff-name">National Student Council</span><span class="aff-role">Web developer, Press Office</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-soft pad-6" src="media/logos/code-sinaia.webp" width="48" height="48" loading="lazy" decoding="async" alt="Code Sinaia logo">
+      <span class="aff-text"><span class="aff-name">Code Sinaia</span><span class="aff-role">Co-organizer and instructor</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-soft pad-4" src="media/logos/iuf.webp" width="48" height="48" loading="lazy" decoding="async" alt="International University Fair Romania logo">
+      <span class="aff-text"><span class="aff-name">International University Fair</span><span class="aff-role">Team leader, 2026</span></span>
+    </li>
+    <li class="aff">
+      <img class="logo logo-48 logo-cover" src="media/logos/proedus.webp" width="48" height="48" loading="lazy" decoding="async" alt="PROEDUS logo">
+      <span class="aff-text"><span class="aff-name">PROEDUS</span><span class="aff-role">Volunteer, 250+ hours</span></span>
+    </li>
+  </ul>
+</section>
+
+<!-- WORK -->
+<section id="work" class="wrap section reveal" aria-labelledby="work-title">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow eyebrow-accent">01 / Selected work</p>
+      <h2 id="work-title" class="h2">Three projects to start with</h2>
+    </div>
+    <p class="section-note">Civic tools and products, each shipped to real users.</p>
   </div>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <p class="hero-eyebrow">Bucharest · Romania</p>
-        <h1 class="hero-name">Rareș<br><em>Anghel</em></h1>
-        <p class="hero-tagline">Software developer, researcher &amp; competitive programmer at Tudor Vianu · CS Olympics class</p>
-        <div class="hero-badges">
-          <a href="#forbes" class="badge badge-forbes">Forbes Romania 30 Under 30 · 2026</a>
-          <span class="badge">YYGS 2026 · Yale</span>
-          <span class="badge">CCIR · Harvard IQSS</span>
-          <span class="badge">ONTI Silver · 2026</span>
-        </div>
-        <div class="hero-ctas">
-          <a href="#projects" class="btn-primary">View work</a>
-          <a href="#contact" class="btn-ghost">Get in touch</a>
+  <!-- OCR230 -->
+  <article class="card card-first project">
+    <div>
+      <div class="project-head">
+        <img class="logo logo-64 logo-framed pad-6" src="media/ocr230.webp" width="64" height="64" loading="lazy" decoding="async" alt="OCR230 app icon, an isometric cube built from document blocks">
+        <div>
+          <p class="eyebrow">Desktop app · Microsoft Store</p>
+          <h3 class="h3">OCR230</h3>
         </div>
       </div>
-      <div class="hero-photo-wrap">
-        <div class="hero-photo">
-          <img src="media/poza_eu.png" alt="Rareș Anghel" loading="eager">
+      <p class="project-desc">Automates the processing of Romanian tax Form 230 for NGOs. It began as a problem in my own family and became a free tool used by 100+ organizations, with over a million forms processed.</p>
+      <ul class="list-reset chips" aria-label="Built with">
+        <li>Python</li><li>EasyOCR</li><li>Google Cloud Run</li>
+      </ul>
+      <p class="project-link"><a class="arrow-link arrow-link-lg" href="https://ocr230.com">Open OCR230<span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+    <dl class="metrics">
+      <div class="metric metric-accent">
+        <dt>Romanian NGOs using it</dt>
+        <dd>100+</dd>
+      </div>
+      <div class="metric">
+        <dt>Forms processed</dt>
+        <dd>1M+</dd>
+      </div>
+      <div class="metric metric-note">
+        <dt>Recognition</dt>
+        <dd>InfoEducatie Silver medal in 2025 and again in 2026</dd>
+      </div>
+    </dl>
+  </article>
+
+  <!-- CIVIC DATA -->
+  <article class="card">
+    <div class="civic-head">
+      <div>
+        <p class="eyebrow">Civic data · three dashboards</p>
+        <h3 class="h3">Romania's public data, made explorable</h3>
+      </div>
+      <p>Budgets, schools and health spending are published as dense PDFs and spreadsheets. These dashboards turn them into something a citizen can browse, compare and play with.</p>
+    </div>
+    <ul class="list-reset dash-grid">
+      <li class="dash">
+        <div class="dash-top">
+          <img class="logo logo-48 logo-cover" src="media/logos/bugetul-romaniei.webp" width="48" height="48" loading="lazy" decoding="async" alt="Romania's Budget logo, the letters BR above the Romanian flag">
+          <span class="eyebrow eyebrow-accent dash-stat">150,000+ views</span>
         </div>
-        <div class="hero-photo-ring"></div>
-      </div>
-    </div>
+        <h4>Romania's Budget</h4>
+        <p class="dash-desc">A "Higher or Lower" game, a ministry comparator, 2027 to 2029 estimates, CSV export and a USD/EUR toggle on BNR rates.</p>
+        <p class="dash-link"><a class="arrow-link" href="https://bugetul-romaniei.com">Open dashboard<span class="sr-only"> for Romania's Budget</span><span class="arrow" aria-hidden="true">→</span></a></p>
+      </li>
+      <li class="dash">
+        <div class="dash-top">
+          <img class="logo logo-48 logo-cover" src="media/logos/scolile-romaniei.webp" width="48" height="48" loading="lazy" decoding="async" alt="Romania's Schools logo, an open book under a roof">
+          <span class="eyebrow dash-stat">3M+ students · 17,000+ schools</span>
+        </div>
+        <h4>Romania's Schools</h4>
+        <p class="dash-desc">Built on Ministry of Education (SIIIR) data for 2025 to 2026, with county comparisons, a heatmap and a game.</p>
+        <p class="dash-link"><a class="arrow-link" href="https://scolile-romaniei.raresanghel.com">Open dashboard<span class="sr-only"> for Romania's Schools</span><span class="arrow" aria-hidden="true">→</span></a></p>
+      </li>
+      <li class="dash">
+        <div class="dash-top">
+          <img class="logo logo-48 logo-cover" src="media/logos/buget-cnas.webp" width="48" height="48" loading="lazy" decoding="async" alt="Romania's Health Budget logo, a pulse line rising into bar chart columns">
+          <span class="eyebrow dash-stat">FNUASS · CNAS reports</span>
+        </div>
+        <h4>Romania's Health Budget</h4>
+        <p class="dash-desc">National health insurance fund spending, extracted from CNAS PDF reports, with its own visual identity.</p>
+        <p class="dash-link"><a class="arrow-link" href="https://buget-cnas.raresanghel.com">Open dashboard<span class="sr-only"> for Romania's Health Budget</span><span class="arrow" aria-hidden="true">→</span></a></p>
+      </li>
+    </ul>
+  </article>
 
-    <div class="hero-ledger reveal" id="hero-ledger">
-      <div class="ledger-cell">
-        <span class="ledger-num" data-count="1000000">0</span>
-        <span class="ledger-label">forms processed<em>OCR230</em></span>
+  <!-- ADVANCEDED LINK -->
+  <article class="card project">
+    <div>
+      <div class="project-head">
+        <img class="logo logo-64 logo-framed pad-8" src="media/advance_ed_logo.webp" width="64" height="64" loading="lazy" decoding="async" alt="AdvancedEd Link logo, a letter A shaped like a star wearing a graduation cap">
+        <div>
+          <p class="eyebrow">Startup · Founder Engineer</p>
+          <h3 class="h3">AdvancedEd Link</h3>
+        </div>
       </div>
-      <div class="ledger-cell">
-        <span class="ledger-num" data-count="3000000">0</span>
-        <span class="ledger-label">students covered<em>Romania's Schools</em></span>
-      </div>
-      <div class="ledger-cell">
-        <span class="ledger-num" data-count="10000">0</span>
-        <span class="ledger-label">resumes scored<em>CCIR bias study</em></span>
-      </div>
-      <div class="ledger-cell">
-        <span class="ledger-num" data-count="150">0</span>
-        <span class="ledger-label">children taught<em>Code Sinaia</em></span>
-      </div>
+      <p class="project-desc">A neuroadaptive learning platform I co-founded with Miruna Constantin. I built the diagnostic flow, the adaptive session engine and the data layer.</p>
+      <ul class="list-reset chips" aria-label="Areas">
+        <li>Full stack</li><li>Adaptive sessions</li><li>Data layer</li>
+      </ul>
     </div>
-
-    <div class="hero-scroll-hint">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- FORBES 30 UNDER 30 -->
-  <section id="forbes" class="forbes-band" aria-labelledby="forbes-title">
-    <div class="container forbes-grid">
-      <div class="forbes-text reveal">
-        <p class="forbes-kicker">Forbes Romania <span aria-hidden="true">·</span> 30 Under 30 <span aria-hidden="true">·</span> Class of 2026</p>
-        <h2 class="forbes-title" id="forbes-title">Named in the <em>Forbes Romania</em> 30 Under 30 list</h2>
-        <p class="forbes-body">
-          I'm part of the 15th class of Forbes Romania 30 Under 30, profiled in the October 2026 issue (#281) as a researcher and the founder of OCR230. The profile, <span lang="ro">&bdquo;Codul care repară birocrația&rdquo;</span> (&ldquo;The code that fixes bureaucracy&rdquo;), follows the path from a problem in my own family to a free tool now used by 100+ Romanian NGOs.
-        </p>
-        <dl class="forbes-meta">
-          <div><dt>Publication</dt><dd>Forbes Romania, issue #281</dd></div>
-          <div><dt>Section</dt><dd>Dosar, pp. 144&ndash;145</dd></div>
-          <div><dt>Profiled as</dt><dd>Researcher &amp; founder, OCR230</dd></div>
-        </dl>
-        <p class="forbes-thanks">Thank you to Forbes Romania, the jury and the partners, and to the mentors, teachers, classmates and family who supported me and my projects along the way.</p>
+    <dl class="metrics">
+      <div class="metric metric-accent">
+        <dt>Harvard Presidential Innovation Challenge</dt>
+        <dd>Semifinalist</dd>
+        <dd class="metric-sub">2026</dd>
       </div>
-      <figure class="forbes-portrait reveal">
-        <img src="media/forbes-30u30-2026-portrait.jpg" alt="Portrait of Rareș Anghel with the Forbes Romania 30 Under 30, Ediția 2026 stamp" width="1100" height="1556" loading="lazy">
-        <figcaption>Forbes Romania 30 Under 30 · Ediția 2026</figcaption>
+    </dl>
+  </article>
+
+  <!-- MORE PROJECTS -->
+  <div class="more">
+    <h3 class="eyebrow">More projects</h3>
+    <ul class="list-reset more-list">
+      <li class="more-item">
+        <img class="logo logo-44" src="media/logos/careesansa.svg" width="44" height="44" loading="lazy" decoding="async" alt="Care e șansa? logo, a 3 by 3 dot grid with one red dot">
+        <span class="more-name">Care e șansa?</span>
+        <span class="more-desc">21 Romanian-language minigames about probability and statistics. You guess or play first, then see the math. Includes a daily challenge and a class mode for teachers.</span>
+        <span class="more-links"><a class="arrow-link" href="https://www.careesansa.ro/">Live<span class="sr-only">: Care e șansa?</span></a></span>
+      </li>
+      <li class="more-item">
+        <img class="logo logo-44" src="media/yygs-connect.svg" width="44" height="44" loading="lazy" decoding="async" alt="YYGS Connect app icon">
+        <span class="more-name">YYGS Connect</span>
+        <span class="more-desc">Networking app built at the Yale YYGS 2026 hackathon that matches scholars by shared interests. 170 users in its first 24 hours.</span>
+        <span class="more-links"><a class="arrow-link" href="https://yygs-connect.fun">Live<span class="sr-only">: YYGS Connect</span></a></span>
+      </li>
+      <li class="more-item">
+        <img class="logo logo-44 logo-framed pad-4" src="media/logos/code-sinaia.webp" width="44" height="44" loading="lazy" decoding="async" alt="Code Sinaia logo">
+        <span class="more-name">Code Sinaia</span>
+        <span class="more-desc">Children's programming camp run under Inproted NGO. Three editions so far, 150+ children taught.</span>
+        <span class="more-links"><a class="arrow-link" href="https://codesinaia.inproted.org/">Live<span class="sr-only">: Code Sinaia</span></a></span>
+      </li>
+      <li class="more-item">
+        <span class="initials initials-dark" aria-hidden="true">10-K</span>
+        <span class="more-name">K-10 SEC Analyzer</span>
+        <span class="more-desc">Scores pricing power, uncertainty and risk factors in SEC 10-K filings with FinBERT, with charts and CSV export.</span>
+        <span class="more-links"><a class="arrow-link" href="https://k10analyzer.streamlit.app/">Live<span class="sr-only">: K-10 SEC Analyzer</span></a><a class="arrow-link" href="https://github.com/RaresAnghel08/k-10-sec-analyzer">Code<span class="sr-only">: K-10 SEC Analyzer</span></a></span>
+      </li>
+      <li class="more-item">
+        <img class="logo logo-44" src="media/pyinfo.svg" width="44" height="44" loading="lazy" decoding="async" alt="PyInfo app icon, a terminal prompt">
+        <span class="more-name">PyInfo</span>
+        <span class="more-desc">Flask and SQLite platform for solving Python problems, with real-time submission feedback.</span>
+        <span class="more-links"><a class="arrow-link" href="https://pyinfo.vercel.app/">Live<span class="sr-only">: PyInfo</span></a></span>
+      </li>
+      <li class="more-item">
+        <img class="logo logo-44 logo-framed pad-4" src="media/logos/vianu.webp" width="44" height="44" loading="lazy" decoding="async" alt="Tudor Vianu crest, used for the Romanian Masters of Informatics site">
+        <span class="more-name">Romanian Masters of Informatics</span>
+        <span class="more-desc">Competition website moved from Hugo to a static site, with a Python generator for the participants page.</span>
+        <span class="more-links"><a class="arrow-link" href="https://rmi.lbi.ro/">Live<span class="sr-only">: Romanian Masters of Informatics</span></a><a class="arrow-link" href="https://github.com/RaresAnghel08/rmi-website">Code<span class="sr-only">: Romanian Masters of Informatics</span></a></span>
+      </li>
+      <li class="more-item">
+        <img class="logo logo-44 logo-framed pad-3" src="media/logos/consiliul-elevilor-mark.webp" width="44" height="44" loading="lazy" decoding="async" alt="National Student Council emblem">
+        <span class="more-name">National Student Council</span>
+        <span class="more-desc">WordPress sites built and maintained for the Council's Press Office.</span>
+        <span class="more-links"></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="research" aria-labelledby="research-title">
+  <div class="wrap research-inner reveal">
+    <div class="research-grid">
+      <div class="research-main">
+        <div class="research-kicker">
+          <img class="logo logo-36 logo-cover" src="media/logos/ccir.webp" width="36" height="36" loading="lazy" decoding="async" alt="CCIR logo">
+          <p class="eyebrow">02 / Research · CCIR, 2026</p>
+        </div>
+        <h2 id="research-title" class="h2 research-title">Does socioeconomic class change how LLMs screen resumes?</h2>
+        <p class="research-lede">A conjoint experiment on 10,000+ synthetic resumes across three models, run at the Cambridge Centre for International Research. Supervised by Dr. Danny Ebanks (Harvard IQSS) and Dominic Skinnion (MIT), and presented at the CCIR Student Research Symposium, King's College, Cambridge, in July 2026.</p>
+        <ul class="list-reset results">
+          <li class="result">
+            <div class="eyebrow">Claude Sonnet 4.6</div>
+            <div class="result-finding">Significant class bias</div>
+            <p>Observed for Data Analyst roles.</p>
+          </li>
+          <li class="result">
+            <div class="eyebrow">Gemini 3.5 Flash</div>
+            <div class="result-finding">Near-zero bias</div>
+            <p>Class had almost no effect on screening.</p>
+          </li>
+          <li class="result">
+            <div class="eyebrow">Qwen 2.5 (7B)</div>
+            <div class="result-finding">Selective bias</div>
+            <p>Bias appeared in some cases and not others.</p>
+          </li>
+        </ul>
+      </div>
+      <figure class="research-photo">
+        <img src="media/ccir-symposium.webp" width="700" height="1099" loading="lazy" decoding="async" alt="Rares Anghel standing beside the CCIR Student Research Symposium banner at King's College, Cambridge">
+        <figcaption>CCIR Student Research Symposium, King's College, Cambridge</figcaption>
       </figure>
     </div>
-    <div class="container">
-      <figure class="forbes-figure forbes-spread reveal">
-        <img src="media/forbes-30u30-2026-spread.jpg" alt="Forbes Romania, October 2026 issue: two-page profile of Rareș Anghel titled Codul care repară birocrația" width="1600" height="900" loading="lazy">
-        <figcaption>In print · Forbes Romania #281 · October 2026 · pp. 144&ndash;145</figcaption>
-      </figure>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="section-label">About</div>
-      <div class="about-grid">
-        <div class="about-main">
-          <h2 class="section-heading">Building things that matter,<br><em>at scale</em></h2>
-          <p class="about-body">
-            I'm a 12th-grader (senior) in the Olympics class at Tudor Vianu National College of Computer Science, one of Romania's top CS programs. My work spans full-stack product engineering, academic ML/NLP research, and civic tech. I care about building software that solves real problems for real people.
-          </p>
-          <p class="about-body">
-            Named to the Forbes Romania 30 Under 30 class of 2026. Currently: Founder Engineer at AdvancedEd Link and co-organizer of Code Sinaia, a programming camp that has taught 150+ children across 3+ editions, while finishing an intensive SAT prep sprint. Since completing YYGS 2026 (Yale, IST session), I presented my CCIR research at Cambridge, supervised by Dr. Danny Ebanks (Harvard IQSS) and Dominic Skinnion (MIT).
-          </p>
+    <div class="pubs">
+      <h3 class="eyebrow">Publications</h3>
+      <ul class="list-reset">
+        <li class="pub">
+          <span class="pub-title">Artificial Intelligence for Nature Conservation</span>
+          <span class="pub-meta">July 2026 · Terra is Crying, Save It! · ISSN 2457-6174</span>
+        </li>
+        <li class="pub">
+          <span class="pub-title">The Green Robot: Technology's Contribution to Environmental Conservation</span>
+          <span class="pub-meta">June 2025 · Terra is Crying, Save It! · ISSN 2457-6174</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section id="recognition" class="wrap section reveal" aria-labelledby="recognition-title">
+  <p class="eyebrow eyebrow-accent section-kicker">03 / Recognition</p>
+  <h2 id="recognition-title" class="h2">Awards, programs and service</h2>
+
+  <article class="feature">
+    <div class="feature-text">
+      <p class="eyebrow">Featured · Forbes Romania #281</p>
+      <h3 class="feature-title">Forbes Romania 30 Under 30, 2026</h3>
+      <p class="feature-desc">Profiled in the October 2026 issue (#281), pages 144 and 145, as a researcher and the founder of OCR230. The piece is titled “<span lang="ro">Codul care repară birocrația</span>”.</p>
+      <p class="feature-cta"><a class="btn btn-dark btn-sm" href="https://www.forbes.ro/forbes-romania-30-sub-30-editia-2026-rares-anghel-cercetator-fondator-proiect-ocr230-codul-care-repara-birocratia-529809">Read the profile on Forbes.ro<span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+    <figure class="feature-media">
+      <img src="media/forbes-30u30-2026-spread-800.webp"
+           srcset="media/forbes-30u30-2026-spread-800.webp 800w, media/forbes-30u30-2026-spread-1600.webp 1600w"
+           sizes="(min-width: 1200px) 480px, (min-width: 800px) 45vw, 100vw"
+           width="1600" height="900" loading="lazy" decoding="async"
+           alt="Forbes Romania issue 281, pages 144 and 145: the profile titled Codul care repară birocrația, with a full-page photo of Rares Anghel">
+    </figure>
+  </article>
+
+  <ul class="list-reset timeline">
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2026</span>
+      <span class="initials" aria-hidden="true">IE</span>
+      <span class="tl-title">InfoEducatie Silver, 6th place</span>
+      <span class="tl-desc">National finals with OCR230 v2.8</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2026</span>
+      <span class="initials" aria-hidden="true">ONTI</span>
+      <span class="tl-title">ONTI Silver</span>
+      <span class="tl-desc">11th-grade national ICT Olympiad, Satu Mare</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2026</span>
+      <img class="logo logo-40 logo-cover" src="media/logos/yygs.webp" width="40" height="40" loading="lazy" decoding="async" alt="">
+      <span class="tl-title">Yale Young Global Scholars, IST</span>
+      <span class="tl-desc">Scholarship recipient, one of six Romanians across all YYGS programs</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2026</span>
+      <img class="logo logo-40 logo-framed pad-3" src="media/logos/iuf.webp" width="40" height="40" loading="lazy" decoding="async" alt="">
+      <span class="tl-title">Team leader, International University Fair</span>
+      <span class="tl-desc">Coordinated 50+ volunteers guiding 3,000+ students</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2026</span>
+      <img class="logo logo-40 logo-framed pad-4" src="media/advance_ed_logo.webp" width="40" height="40" loading="lazy" decoding="async" alt="">
+      <span class="tl-title">Harvard Presidential Innovation Challenge</span>
+      <span class="tl-desc">Semifinalist with AdvancedEd Link</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2025</span>
+      <span class="initials" aria-hidden="true">IE</span>
+      <span class="tl-title">InfoEducatie Silver medal</span>
+      <span class="tl-desc">Silver across all high school grades, for OCR230</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2025</span>
+      <img class="logo logo-40 logo-framed pad-4" src="media/logos/code-sinaia.webp" width="40" height="40" loading="lazy" decoding="async" alt="">
+      <span class="tl-title">Code Sinaia instructor</span>
+      <span class="tl-desc">Co-organizer of the 3rd edition</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2024</span>
+      <span class="initials" aria-hidden="true">ONTI</span>
+      <span class="tl-title">ONTI Bronze</span>
+      <span class="tl-desc">9th-grade Olympiad in Slobozia, the school's first national podium</span>
+    </li>
+    <li class="tl-item">
+      <span class="eyebrow tl-year">2024 to 2026</span>
+      <img class="logo logo-40 logo-cover" src="media/logos/proedus.webp" width="40" height="40" loading="lazy" decoding="async" alt="">
+      <span class="tl-title">PROEDUS volunteer</span>
+      <span class="tl-desc">250+ hours with a Bucharest educational projects center</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="wrap section reveal" aria-labelledby="about-title">
+  <div class="about-grid">
+    <div class="about-head">
+      <p class="eyebrow eyebrow-accent">04 / About</p>
+      <h2 id="about-title" class="h2">Olympiad training, pointed at civic problems</h2>
+    </div>
+    <div class="about-body">
+      <p class="about-bio">I'm a 12th-grade student in the Olympics class at Tudor Vianu National High School of Computer Science in Bucharest. I work as Founder Engineer at AdvancedEd Link, co-organize Code Sinaia and study for the SAT. In between I build civic tools and run research on AI.</p>
+      <div class="skills">
+        <div class="skill">
+          <h3 class="eyebrow">Languages</h3>
+          <ul class="list-reset"><li>Python</li><li>C++</li><li>TypeScript</li><li>JavaScript</li></ul>
         </div>
-        <div class="about-sidebar">
-          <div class="skills-block">
-            <p class="skills-label">Languages</p>
-            <div class="skill-list">
-              <span>Python</span><span>C++</span><span>TypeScript</span><span>JavaScript</span>
-            </div>
-          </div>
-          <div class="skills-block">
-            <p class="skills-label">Stack</p>
-            <div class="skill-list">
-              <span>React / Vite</span><span>Next.js</span><span>Tailwind</span><span>tRPC</span>
-              <span>Flask</span><span>Node / Express</span><span>Prisma</span>
-            </div>
-          </div>
-          <div class="skills-block">
-            <p class="skills-label">ML / Data</p>
-            <div class="skill-list">
-              <span>scikit-learn</span><span>TensorFlow</span><span>Ollama</span><span>FinBERT</span>
-              <span>EasyOCR</span><span>Pandas / NumPy</span>
-            </div>
-          </div>
-          <div class="skills-block">
-            <p class="skills-label">Infra</p>
-            <div class="skill-list">
-              <span>Google Cloud Run</span><span>Vercel</span><span>GitHub Actions</span>
-            </div>
-          </div>
+        <div class="skill">
+          <h3 class="eyebrow">Web</h3>
+          <ul class="list-reset"><li>React and Vite</li><li>Next.js and tRPC</li><li>Tailwind</li><li>Flask, Node and Express</li><li>Prisma</li></ul>
+        </div>
+        <div class="skill">
+          <h3 class="eyebrow">ML and data</h3>
+          <ul class="list-reset"><li>scikit-learn</li><li>TensorFlow</li><li>FinBERT, Ollama</li><li>EasyOCR</li><li>Pandas and NumPy</li></ul>
+        </div>
+        <div class="skill">
+          <h3 class="eyebrow">Infrastructure</h3>
+          <ul class="list-reset"><li>Google Cloud Run</li><li>Vercel</li><li>GitHub Actions</li></ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section projects">
-    <div class="container">
-      <div class="section-label">Projects <span class="label-count">· n=11</span></div>
-      <h2 class="section-heading">Featured work</h2>
-
-      <!-- Featured row: 2 big -->
-      <div class="projects-featured">
-
-        <div class="project-card card-dark reveal">
-          <div class="project-logo-wrap">
-            <img src="media/ocr230.png" alt="OCR230" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>OCR230</h3>
-            <p>Desktop app automating Romanian tax Form 230 processing for NGOs. Published on the Microsoft Store, deployed on Google Cloud Run. Used by 100+ NGOs, processing 1M+ forms. <strong>Silver medal at InfoEducație</strong>, where it competed across all high school grades.</p>
-            <div class="project-tags"><span>Python</span><span>EasyOCR</span><span>Cloud Run</span><span>MS Store</span></div>
-            <div class="project-links">
-              <a href="https://ocr230.com/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card card-dark reveal">
-          <div class="project-logo-wrap">
-            <img src="media/advance_ed_logo.png" alt="AdvancedEd Link" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>AdvancedEd Link <span class="role-chip">Founder Engineer</span></h3>
-            <p>Neuroadaptive learning platform, co-founded with Miruna Constantin (Harvard MEd). Built the diagnostic flow, adaptive session engine, and Prisma data layer. <strong>Top 100 Semifinalist at the Harvard Presidential Innovation Challenge.</strong> Stack: Vinxi, tRPC, TanStack Router, Tailwind. YC application submitted.</p>
-            <div class="project-tags"><span>TypeScript</span><span>tRPC</span><span>Prisma</span><span>Tailwind</span></div>
-            <div class="project-links">
-              <a href="https://vssia-advanceded-link.vercel.app/" target="_blank" rel="noopener">Production <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Grid: rest -->
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/bugetul-romaniei.png" alt="Bugetul Romaniei" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>Romania's Budget</h3>
-            <p>Interactive Romanian national budget dashboard with a "Higher or Lower" game mechanic, a ministry-vs-ministry comparator, 2027–2029 spending estimates, CSV export, and a USD/EUR toggle powered by BNR historical exchange-rate data. 7,800+ users. Built with React + Vite + Tailwind on public Ministry of Finance data.</p>
-            <div class="project-tags"><span>React</span><span>Vite</span><span>Tailwind</span><span>Civic tech</span></div>
-            <div class="project-links">
-              <a href="https://bugetul-romaniei.com" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-              <a href="https://economedia.ro/cine-este-rares-anghel-elevul-care-a-transformat-bugetele-ministerelor-intr-o-platforma-usor-de-inteles-pentru-cetateni-toata-lumea-plateste-taxe-iar-multi-vor-sa-stie-cum-sunt-folosite-ac.html" target="_blank" rel="noopener">Press <i class="fas fa-newspaper"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/yygs-connect.svg" alt="YYGS Connect" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>YYGS Connect</h3>
-            <p>Networking app built at the YYGS 2026 hackathon (Yale) to help scholars find and message each other by shared interests. 170 users within the first 24 hours.</p>
-            <div class="project-tags"><span>Hackathon</span><span>Networking</span></div>
-            <div class="project-links">
-              <a href="https://yygs-connect.fun" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/code_sinaia_logo.png" alt="Code Sinaia" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>Code Sinaia</h3>
-            <p>Programming summer camp for children, co-organized under Inproted NGO. 3+ editions, 150+ children taught. Curriculum design and hands-on instruction.</p>
-            <div class="project-tags"><span>Education</span><span>Python</span><span>NGO</span></div>
-            <div class="project-links">
-              <a href="https://codesinaia.inproted.org/" target="_blank" rel="noopener">Website <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/consiliul_elevilor.png" alt="National Student Council" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>National Student Council <span class="role-chip">Web Developer</span></h3>
-            <p>Web developer for the Press Office of the National Student Council, building and maintaining WordPress sites used by students nationwide, working alongside Regional Student Councils across Romania.</p>
-            <div class="project-tags"><span>WordPress</span><span>PHP</span><span>National</span></div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/scolile-romaniei.png" alt="Romania's Schools" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>Romania's Schools</h3>
-            <p>Civic dashboard on Romania's education system, built on SIIIR (Ministry of Education) open data for the 2025–2026 school year — 3M+ students across 17,000+ schools. National overview, per-county comparisons, a county heatmap, and a "Higher or Lower" game comparing counties.</p>
-            <div class="project-tags"><span>React</span><span>Vite</span><span>Recharts</span><span>Civic tech</span></div>
-            <div class="project-links">
-              <a href="https://scolile-romaniei.raresanghel.com" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/buget-cnas.png" alt="Romania's Health Budget" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>Romania's Health Budget</h3>
-            <p>Civic dashboard for Romania's national health insurance fund (FNUASS), parsed from CNAS's own PDF budget reports — revenue, spending, medicines, hospitals, and medical leave, with its own visual identity distinct from the national budget dashboard.</p>
-            <div class="project-tags"><span>React</span><span>Vite</span><span>Recharts</span><span>Civic tech</span></div>
-            <div class="project-links">
-              <a href="https://buget-cnas.raresanghel.com" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/vianu.png" alt="RMI" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>Romanian Masters of Informatics</h3>
-            <p>Static HTML/CSS/JS site converted from Hugo. Python generator builds the participants page from CSV. Deployed on school server.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>Python</span></div>
-            <div class="project-links">
-              <a href="https://rmi.lbi.ro/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/RaresAnghel08/rmi-website" target="_blank" rel="noopener">Code <i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-logo-wrap small">
-            <img src="media/pyinfo.svg" alt="PyInfo" class="project-logo">
-          </div>
-          <div class="project-body">
-            <h3>PyInfo</h3>
-            <p>Platform for solving programming problems in Python, built with Flask and SQLite. Registration, login, problem listing, submissions with real-time feedback.</p>
-            <div class="project-tags"><span>Python</span><span>Flask</span><span>SQLite</span></div>
-            <div class="project-links">
-              <a href="https://pyinfo.vercel.app/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-          <div class="project-body">
-            <h3>K-10 SEC Analyzer</h3>
-            <p>Web app analyzing SEC 10-K filings with NLP and FinBERT. Scores pricing power, uncertainty, and risk factors (PPI / UNC / RF) with visual charts and CSV export.</p>
-            <div class="project-tags"><span>Python</span><span>FinBERT</span><span>FastAPI</span><span>Streamlit</span></div>
-            <div class="project-links">
-              <a href="https://k10analyzer.streamlit.app/" target="_blank" rel="noopener">Live <i class="fas fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/RaresAnghel08/k-10-sec-analyzer" target="_blank" rel="noopener">Code <i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+<!-- CONTACT -->
+<section id="contact" class="wrap contact" aria-labelledby="contact-title">
+  <div class="contact-card reveal">
+    <div class="contact-main">
+      <p class="eyebrow">05 / Contact</p>
+      <h2 id="contact-title" class="contact-title">Let's build <span class="accent">something</span>.</h2>
+      <p class="contact-lede">Open to research collaborations, internships and projects worth building.</p>
+      <p class="contact-email"><a href="mailto:rares@raresanghel.com">rares@raresanghel.com</a></p>
     </div>
-  </section>
-
-  <!-- RESEARCH -->
-  <section class="section research-strip">
-    <div class="container">
-      <div class="research-card reveal">
-        <div class="research-meta">
-          <div class="research-photo">
-            <img src="media/rares_at_ccir_crop.jpg" alt="Rareș presenting at the CCIR Student Research Symposium, King's College, Cambridge">
-            <img src="media/ccir_logo.jpg" alt="CCIR" class="research-logo-badge">
-          </div>
-          <div class="research-affil">
-            <span>CCIR · Harvard IQSS · MIT</span>
-          </div>
-        </div>
-        <div class="research-body">
-          <p class="research-kicker">Academic Research · 2025–2026</p>
-          <h3>"Class Bias in LLM-Based Resume Screening: How Socioeconomic Signals Shape Scores for Equally Qualified Candidates"</h3>
-          <p>Conducted at the Cambridge Centre for International Research (CCIR), in collaboration with Harvard IQSS and MIT. Ran a conjoint experiment scoring 10,000+ synthetic resumes across Claude Sonnet 4.6, Gemini 3.5 Flash, and Qwen 2.5 (7B) to measure socioeconomic bias in AI-driven resume screening. Found statistically significant class bias in Claude Sonnet 4.6 for Data Analyst roles (26% vs. 6% shortlisting gap between high and low socioeconomic status), near-zero bias in Gemini 3.5 Flash, and selective bias in Qwen 2.5.</p>
-          <p>Presented findings at the CCIR Student Research Symposium, King's College, Cambridge (July 2026).</p>
-          <p class="research-supervisors">Supervised by <strong>Dr. Danny Ebanks</strong> (Harvard IQSS) &amp; <strong>Dominic Skinnion</strong> (MIT)</p>
-          <div class="project-tags"><span>NLP</span><span>LLMs</span><span>Conjoint Experiment</span><span>Python</span><span>LaTeX</span></div>
-        </div>
-      </div>
+    <div class="contact-actions">
+      <a class="btn btn-outline-navy" href="https://linkedin.com/in/raresanghel">LinkedIn</a>
+      <a class="btn btn-outline-navy" href="https://github.com/RaresAnghel08">GitHub</a>
+      <a class="btn btn-white" href="cv.pdf" type="application/pdf" download="Rares-Anghel-CV.pdf">Download CV</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="section achievements">
-    <div class="container">
-      <div class="section-label">Achievements <span class="label-count">· n=11</span></div>
-      <h2 class="section-heading">Recognitions &amp; milestones</h2>
-      <div class="ach-grid">
+</main>
 
-        <!-- Row 1: InfoEducatie featured (spans 2) + YYGS -->
-        <div class="ach-card ach-featured reveal">
-          <div class="ach-img-wrap">
-            <img src="media/diploma_infoeducatie1.png" alt="InfoEducație Silver">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2025</span>
-            <h3>InfoEducație Silver Medal</h3>
-            <p>National software projects competition. Silver across all high school grades for OCR230, a free tool that's now used by 100+ Romanian NGOs and has processed 1M+ forms.</p>
-          </div>
-        </div>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Rares Anghel · Built in Bucharest</span>
+    <a href="#top">Back to top<span class="arrow" aria-hidden="true">↑</span></a>
+  </div>
+</footer>
 
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap logo">
-            <img src="media/yygs_logo.jpg" alt="YYGS">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2026</span>
-            <h3>Yale Young Global Scholars (IST)</h3>
-            <p>The only Romanian accepted to the IST session with a scholarship. Selected among 6 Romanians total across all YYGS programs.</p>
-          </div>
-        </div>
+<script>
+  // Mobile menu and one subtle reveal per section.
+  (function () {
+    var header = document.getElementById('site-header');
+    var btn = header.querySelector('.menu-toggle');
+    var label = btn.querySelector('.menu-label');
+    var nav = document.getElementById('site-nav');
 
-        <!-- Row 2: ONTI Silver 11th + ONTI Bronze 9th + CCIR -->
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap diploma">
-            <img src="media/silver_onti_11th.jpg" alt="ONTI Silver 2026">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2026</span>
-            <h3>ONTI Silver Medal</h3>
-            <p>Silver at the National Olympiad in ICT (11th grade) in Satu Mare, earning national recognition for technical excellence.</p>
-          </div>
-        </div>
+    function setOpen(open) {
+      header.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      label.textContent = open ? 'Close' : 'Menu';
+    }
+    btn.addEventListener('click', function () {
+      setOpen(btn.getAttribute('aria-expanded') !== 'true');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && header.classList.contains('is-open')) { setOpen(false); btn.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (header.classList.contains('is-open') && !header.contains(e.target)) setOpen(false);
+    });
+    window.matchMedia('(min-width: 900px)').addEventListener('change', function (m) {
+      if (m.matches) setOpen(false);
+    });
 
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap diploma">
-            <img src="media/bronze_onti_9th.jpg" alt="ONTI Bronze 2024">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2024</span>
-            <h3>ONTI Bronze Medal</h3>
-            <p>Bronze at the National Olympiad in ICT (9th grade) in Slobozia, marking the first national podium finish at Tudor Vianu.</p>
-          </div>
-        </div>
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('reveal-ready');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
 
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap logo">
-            <img src="media/ccir_logo.jpg" alt="CCIR">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2026</span>
-            <h3>CCIR Research at Cambridge</h3>
-            <p>Presented findings on socioeconomic bias in AI-driven resume screening at the CCIR Student Research Symposium, King's College, Cambridge, with supervision from Harvard IQSS and MIT.</p>
-          </div>
-        </div>
-
-        <!-- Row 3: InfoEducatie Medal + Code Sinaia + Harvard Innovation Challenge -->
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap diploma">
-            <img src="media/medalie_infoeducatie_2025.jpg" alt="Medal">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2025</span>
-            <h3>InfoEducație Medal</h3>
-            <p>Physical medal awarded at the national InfoEducație ceremony for outstanding project quality and technical execution.</p>
-          </div>
-        </div>
-
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap">
-            <img src="media/presentation_code_sinaia2025.png" alt="Code Sinaia">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2025</span>
-            <h3>Code Sinaia Instructor</h3>
-            <p>Co-organized the 3rd edition of Code Sinaia, Romania's programming camp for children under Inproted NGO.</p>
-          </div>
-        </div>
-
-        <div class="ach-card ach-highlight reveal">
-          <div class="ach-img-wrap logo">
-            <img src="media/advance_ed_logo.png" alt="Harvard Innovation Challenge">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2025</span>
-            <h3>Harvard Presidential Innovation Challenge</h3>
-            <p>AdvancedEd Link recognized as a <strong>Top 100 Semifinalist</strong> at the Harvard Presidential Innovation Challenge Innovation Lab.</p>
-          </div>
-        </div>
-
-        <!-- Row 4: InfoEducatie 2026 + Volunteering -->
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap">
-            <img src="media/project_presenting_infoeducatie.png" alt="InfoEducație 2026">
-          </div>
-          <div class="ach-body">
-            <span class="ach-year">2026</span>
-            <h3>InfoEducație 2026 Silver Medal (6th Place)</h3>
-            <p>National finals in Focșani with OCR230 v2.8, the expanded and fully refactored version that now supports 100+ NGO partners and has processed 1M+ forms.</p>
-          </div>
-        </div>
-
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap logo"><img src="media/proedus.jpg" alt="PROEDUS"></div>
-          <div class="ach-body">
-            <span class="ach-year">2024–2026</span>
-            <h3>PROEDUS Volunteer</h3>
-            <p>250+ hours since Sep 2024 with Centrul de Proiecte Educaționale și Sportive București, supporting educational tours, museum visits, and sports events for students across Bucharest.</p>
-          </div>
-        </div>
-
-        <div class="ach-card reveal">
-          <div class="ach-img-wrap logo"><img src="media/riuf27.webp" alt="IUF Romania"></div>
-          <div class="ach-body">
-            <span class="ach-year">2026</span>
-            <h3>Team Leader — IUF 2026</h3>
-            <p>Coordinated 50+ volunteers guiding 3,000+ students at the International University Fair, Sala Palatului, Bucharest.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section id="publications" class="section publications">
-    <div class="container">
-      <div class="section-label">Publications <span class="label-count">· n=2</span></div>
-      <h2 class="section-heading">Published writing</h2>
-      <div class="projects-grid pubs-grid">
-
-        <div class="project-card reveal">
-          <div class="project-icon"><i class="fas fa-leaf"></i></div>
-          <div class="project-body">
-            <h3>Artificial Intelligence for Nature Conservation</h3>
-            <p>Article examining how AI-driven tools — from satellite monitoring to species-identification models — are being applied to environmental conservation efforts, and where their limitations lie.</p>
-            <div class="project-tags"><span>Terra is Crying, Save It!</span><span>ISSN 2457-6174</span><span>Jul 2026</span></div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-icon"><i class="fas fa-robot"></i></div>
-          <div class="project-body">
-            <h3>The Green Robot: Technology's Contribution to Environmental Conservation</h3>
-            <p>Article exploring how robotics and automation are being deployed to support environmental conservation, from habitat monitoring to waste management.</p>
-            <div class="project-tags"><span>Terra is Crying, Save It!</span><span>ISSN 2457-6174</span><span>Jun 2025</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <div class="section-label">Contact</div>
-      <div class="contact-inner">
-        <h2 class="section-heading contact-heading">Let's build<br><em>something.</em></h2>
-        <p class="contact-sub">Open to research collaborations, internships, and interesting projects. Reach out — I respond fast.</p>
-        <div class="contact-links">
-          <a href="mailto:rares@raresanghel.com" class="contact-link" id="email-link">
-            <i class="fas fa-envelope"></i> rares@raresanghel.com
-          </a>
-          <a href="https://www.linkedin.com/in/raresanghel/" target="_blank" rel="noopener" class="contact-link">
-            <i class="fab fa-linkedin"></i> linkedin.com/in/raresanghel
-          </a>
-          <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener" class="contact-link">
-            <i class="fab fa-github"></i> github.com/RaresAnghel08
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">Rareș Anghel</span>
-      <span class="footer-copy">© 2026 · Built with care in Bucharest</span>
-      <div class="footer-socials">
-        <a href="https://github.com/RaresAnghel08" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/raresanghel/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <div id="toast" class="toast" aria-live="polite"></div>
-  <script src="script.js"></script>
+<script>
+  // Analytics (PostHog), loaded after the page so it never blocks rendering.
+  // Skipped on local previews to keep test runs out of the data.
+  (function () {
+    var h = location.hostname;
+    if (location.protocol === 'file:' || h === 'localhost' || h === '127.0.0.1') return;
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/posthog-js@latest/dist/array.js';
+      s.async = true;
+      s.onload = function () {
+        window.posthog && window.posthog.init('phc_u7WXrrP6ZoaduJ7hDJjVc6WTTjLXqgfWWe5mN69fYfLG', {
+          api_host: '/ingest',
+          ui_host: 'https://eu.posthog.com'
+        });
+      };
+      document.head.appendChild(s);
+    });
+  })();
+</script>
 </body>
 </html>
