@@ -1,6 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#0c0c0d"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-    font-family="Georgia, serif" font-size="26" font-weight="700"
-    font-style="italic" fill="#c4a55a" letter-spacing="1">RA</text>
+  <circle cx="32" cy="32" r="29.5" fill="#F5F0E6" stroke="#0E1A2B" stroke-width="4"/>
+  <path fill="#0E1A2B" transform="translate(32 32) scale(0.0285) translate(-711 349)" d="M45 -60H116V-638H45V-698H418Q464 -698 502.0 -687.5Q540 -677 567.5 -655.0Q595 -633 610.0 -599.0Q625 -565 625 -519Q625 -447 582.0 -400.0Q539 -353 471 -339L597 -122Q617 -87 639.0 -73.5Q661 -60 695 -60H701V0H616Q583 0 558.5 -5.5Q534 -11 515.5 -23.0Q497 -35 483.0 -53.0Q469 -71 456 -95L344 -313H256V-60H327V0H45ZM256 -375H373Q426 -375 453.5 -401.0Q481 -427 481 -476V-532Q481 -581 453.5 -607.0Q426 -633 373 -633H256Z M710 -60H761L981 -698H1106L1326 -60H1377V0H1100V-60H1183L1131 -217H890L838 -60H921V0H710ZM908 -280H1113L1013 -590H1008Z"/>
 </svg>
