@@ -7,7 +7,7 @@
   <meta name="description" content="Rares Anghel, student developer and researcher. OCR230 processes tax Form 230 for 100+ Romanian NGOs. Research on class bias in LLM resume screening.">
   <meta name="author" content="Rares Anghel">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#0F1318">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://raresanghel.com/">
 
@@ -35,7 +35,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="site.css">
   <script>document.documentElement.classList.add('js')</script>
 
@@ -47,7 +47,7 @@
     "alternateName": "Rares Anghel",
     "jobTitle": "Software developer and researcher",
     "url": "https://raresanghel.com/",
-    "image": "https://raresanghel.com/media/poza_eu-portrait.webp",
+    "image": "https://raresanghel.com/media/forbes-30u30-2026-hero.webp",
     "sameAs": [
       "https://linkedin.com/in/raresanghel",
       "https://github.com/RaresAnghel08"
@@ -63,7 +63,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- HEADER -->
-<header class="site-header" id="site-header">
+<header class="site-header is-over-hero is-at-top" id="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Rares Anghel, back to top">
       <span class="brand-mark" aria-hidden="true">RA</span>
@@ -90,27 +90,38 @@
 <main id="main" tabindex="-1">
 
 <!-- HERO -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-inner">
-    <div class="hero-text">
-      <p class="eyebrow hero-meta hero-anim d1">
-        <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Forbes Romania 30 Under 30, 2026</span>
-        <span>Bucharest, Romania</span>
-      </p>
-      <h1 id="hero-title" class="h1 hero-anim d2">Software that lightens <span class="accent">public bureaucracy</span>, and research on how AI treats people.</h1>
-      <p class="lede hero-anim d3">I'm Rares Anghel, a student developer and researcher at Tudor Vianu National High School of Computer Science. My tool OCR230 processes tax Form 230 for 100+ Romanian NGOs. My study of class bias in LLM resume screening was presented at Cambridge in July 2026.</p>
-      <div class="cta-row hero-anim d4">
-        <a class="btn btn-dark" href="#work">See selected work</a>
-        <a class="btn btn-light" href="#contact">Get in touch</a>
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-main">
+    <div class="hero-content">
+      <p class="hero-eyebrow hero-anim d1"><span class="hero-rule" aria-hidden="true"></span>Forbes Romania · Edition 2026</p>
+      <div class="hero-heading hero-anim d2">
+        <h1 id="hero-title" class="hero-title"><span class="sr-only">Rares Anghel, Forbes Romania </span><span class="gold">30</span> Under <span class="gold">30</span><span class="sr-only">, 2026</span></h1>
+        <p class="hero-name">Rares Anghel, 18<span class="hero-slash" aria-hidden="true">/</span><span class="hero-role"><span class="role-long">Researcher and founder of OCR230</span><span class="role-short">Founder of OCR230</span></span></p>
+      </div>
+      <blockquote class="hero-quote hero-anim d3">
+        <p>“The code that fixes bureaucracy.”</p>
+        <footer>Forbes Romania, issue 281</footer>
+      </blockquote>
+      <p class="hero-lede hero-anim d3">Student developer and researcher at Tudor Vianu National High School of Computer Science. I build software that lightens public bureaucracy and study how AI treats people.</p>
+      <div class="hero-cta hero-anim d4">
+        <a class="btn-hero" href="#work">See selected work</a>
+        <a class="btn-hero" href="cv.pdf" type="application/pdf">View CV</a>
       </div>
     </div>
-    <figure class="portrait-card hero-settle">
-      <div class="portrait-media">
-        <img src="media/poza_eu-portrait.webp" width="512" height="640" fetchpriority="high" decoding="async" alt="Portrait of Rares Anghel in a black sweater, seated in front of a blue-lit studio backdrop">
-      </div>
-      <figcaption><span class="badge-dot" aria-hidden="true"></span>Forbes Romania 30 Under 30, 2026</figcaption>
-    </figure>
+    <ul class="list-reset hero-stats hero-anim d4" aria-label="Highlights">
+      <li><span class="hero-stat-big">1M+</span><span class="hero-stat-label">forms processed by OCR230</span></li>
+      <li><span class="hero-stat-big">100+</span><span class="hero-stat-label">Romanian NGOs using it</span></li>
+      <li><span class="hero-stat-big">Cambridge</span><span class="hero-stat-label">LLM bias study presented, 2026</span></li>
+      <li><span class="hero-stat-big">Yale</span><span class="hero-stat-label">Young Global Scholars, 2026</span></li>
+    </ul>
   </div>
+  <figure class="hero-photo hero-settle">
+    <img src="media/forbes-30u30-2026-hero.webp"
+         srcset="media/forbes-30u30-2026-hero-720.webp 720w, media/forbes-30u30-2026-hero.webp 1054w"
+         sizes="(min-width: 900px) and (min-aspect-ratio: 5/4) 48vw, 100vw"
+         width="1054" height="1492" fetchpriority="high" decoding="async"
+         alt="Rares Anghel photographed for Forbes Romania 30 Under 30, in a black blazer and white t-shirt against a dark olive backdrop, with the 30 Under 30 Edition 2026 badge">
+  </figure>
 </section>
 
 <!-- IMPACT NUMBERS -->
@@ -552,6 +563,21 @@
     window.matchMedia('(min-width: 900px)').addEventListener('change', function (m) {
       if (m.matches) setOpen(false);
     });
+
+    // Header sits dark over the full-screen hero, then turns light once the hero scrolls away.
+    var hero = document.getElementById('hero');
+    var ticking = false;
+    function syncHeader() {
+      ticking = false;
+      header.classList.toggle('is-over-hero', hero.getBoundingClientRect().bottom > header.offsetHeight);
+      header.classList.toggle('is-at-top', window.scrollY < 8);
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; requestAnimationFrame(syncHeader); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    syncHeader();
 
     var items = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
