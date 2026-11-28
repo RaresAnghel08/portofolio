@@ -240,7 +240,7 @@ main:focus { outline: none; }
   transition: background-color .25s ease, border-color .25s ease;
 }
 .site-header .header-inner { max-width: none; padding-inline: var(--edge); }
-section[id] { scroll-margin-top: 88px; }
+section[id] { scroll-margin-top: calc(var(--hdr) + 32px); }
 .header-inner {
   padding-block: 14px;
   display: flex;
@@ -409,19 +409,19 @@ section[id] { scroll-margin-top: 88px; }
 
 /* Phones, tablets and tall screens: portrait on top, copy below */
 @media not all and (min-width: 900px) and (min-aspect-ratio: 5/4) {
-  .hero { display: flex; flex-direction: column; }
+  /* The header is solid here, so the portrait starts below it and is never covered */
+  .hero { display: flex; flex-direction: column; padding-top: var(--hdr); }
   .hero-photo {
     order: -1;
-    width: min(100%, calc(66svh * .7064));
+    /* Leave room under the portrait for the eyebrow and headline on the first screen */
+    width: clamp(240px, calc((100svh - var(--hdr) - 180px) * .7064), 100%);
     aspect-ratio: 1054 / 1492;
     margin-inline: auto;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
   }
   .hero-photo img { object-position: 50% 0; }
-  .hero-photo::after {
-    background:
-      linear-gradient(0deg, var(--hero-bg) 0%, rgba(15, 19, 24, 0) 12%),
-      linear-gradient(180deg, rgba(15, 19, 24, .75) 0%, rgba(15, 19, 24, 0) 14%);
-  }
+  .hero-photo::after { background: linear-gradient(0deg, var(--hero-bg) 0%, rgba(15, 19, 24, 0) 12%); }
   .hero-main { flex: 1; justify-content: flex-end; padding: 20px var(--edge) 28px; }
   .hero-content { gap: 14px; width: 100%; max-width: 720px; margin-inline: auto; }
   .hero-title { font-size: min(124px, 16cqi); }
@@ -429,9 +429,9 @@ section[id] { scroll-margin-top: 88px; }
   .hero-cta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 6px; }
   .btn-hero { padding: 0 12px; }
   .hero-stats { display: none; }
-  .js .site-header.is-over-hero.is-at-top:not(.is-open) { background: transparent; }
 }
 @media (max-width: 599.98px) {
+  .brand-role { display: none; }
   .hero-lede { display: none; }
   .role-long { display: none; }
   .role-short { display: inline; }
